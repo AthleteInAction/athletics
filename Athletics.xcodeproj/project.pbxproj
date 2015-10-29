@@ -1,0 +1,522 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		AD61021F1BE2E6130009A612 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD61021E1BE2E6130009A612 /* AppDelegate.swift */; };
+		AD6102221BE2E6130009A612 /* Athletics.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = AD6102201BE2E6130009A612 /* Athletics.xcdatamodeld */; };
+		AD6102241BE2E6130009A612 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD6102231BE2E6130009A612 /* ViewController.swift */; };
+		AD6102271BE2E6130009A612 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AD6102251BE2E6130009A612 /* Main.storyboard */; };
+		AD6102291BE2E6130009A612 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AD6102281BE2E6130009A612 /* Images.xcassets */; };
+		AD61022C1BE2E6130009A612 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = AD61022A1BE2E6130009A612 /* LaunchScreen.xib */; };
+		AD6102381BE2E6130009A612 /* AthleticsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD6102371BE2E6130009A612 /* AthleticsTests.swift */; };
+		E0D926ABB0E9AB0D01A78AA6 /* Pods_Athletics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 532598E9C0E224A2EA27CC0C /* Pods_Athletics.framework */; settings = {ATTRIBUTES = (Weak, ); }; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		AD6102321BE2E6130009A612 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = AD6102111BE2E6130009A612 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = AD6102181BE2E6130009A612;
+			remoteInfo = Athletics;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		532598E9C0E224A2EA27CC0C /* Pods_Athletics.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Athletics.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		9C6A14E6F1A96AFC87044C09 /* Pods-Athletics.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Athletics.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Athletics/Pods-Athletics.debug.xcconfig"; sourceTree = "<group>"; };
+		AD6102191BE2E6130009A612 /* Athletics.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Athletics.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		AD61021D1BE2E6130009A612 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		AD61021E1BE2E6130009A612 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		AD6102211BE2E6130009A612 /* Athletics.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Athletics.xcdatamodel; sourceTree = "<group>"; };
+		AD6102231BE2E6130009A612 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		AD6102261BE2E6130009A612 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		AD6102281BE2E6130009A612 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
+		AD61022B1BE2E6130009A612 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
+		AD6102311BE2E6130009A612 /* AthleticsTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = AthleticsTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		AD6102361BE2E6130009A612 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		AD6102371BE2E6130009A612 /* AthleticsTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AthleticsTests.swift; sourceTree = "<group>"; };
+		BF8A320E446C9BCC99D6BB8F /* Pods-Athletics.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Athletics.release.xcconfig"; path = "Pods/Target Support Files/Pods-Athletics/Pods-Athletics.release.xcconfig"; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		AD6102161BE2E6130009A612 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				E0D926ABB0E9AB0D01A78AA6 /* Pods_Athletics.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		AD61022E1BE2E6130009A612 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		A0BB980019FAA517AD32E49E /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				532598E9C0E224A2EA27CC0C /* Pods_Athletics.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		AD6102101BE2E6130009A612 = {
+			isa = PBXGroup;
+			children = (
+				AD61021B1BE2E6130009A612 /* Athletics */,
+				AD6102341BE2E6130009A612 /* AthleticsTests */,
+				AD61021A1BE2E6130009A612 /* Products */,
+				FE781CA8377A50A959787B59 /* Pods */,
+				A0BB980019FAA517AD32E49E /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		AD61021A1BE2E6130009A612 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				AD6102191BE2E6130009A612 /* Athletics.app */,
+				AD6102311BE2E6130009A612 /* AthleticsTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		AD61021B1BE2E6130009A612 /* Athletics */ = {
+			isa = PBXGroup;
+			children = (
+				AD61021E1BE2E6130009A612 /* AppDelegate.swift */,
+				AD6102231BE2E6130009A612 /* ViewController.swift */,
+				AD6102251BE2E6130009A612 /* Main.storyboard */,
+				AD6102281BE2E6130009A612 /* Images.xcassets */,
+				AD61022A1BE2E6130009A612 /* LaunchScreen.xib */,
+				AD6102201BE2E6130009A612 /* Athletics.xcdatamodeld */,
+				AD61021C1BE2E6130009A612 /* Supporting Files */,
+			);
+			path = Athletics;
+			sourceTree = "<group>";
+		};
+		AD61021C1BE2E6130009A612 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				AD61021D1BE2E6130009A612 /* Info.plist */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		AD6102341BE2E6130009A612 /* AthleticsTests */ = {
+			isa = PBXGroup;
+			children = (
+				AD6102371BE2E6130009A612 /* AthleticsTests.swift */,
+				AD6102351BE2E6130009A612 /* Supporting Files */,
+			);
+			path = AthleticsTests;
+			sourceTree = "<group>";
+		};
+		AD6102351BE2E6130009A612 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				AD6102361BE2E6130009A612 /* Info.plist */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		FE781CA8377A50A959787B59 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				9C6A14E6F1A96AFC87044C09 /* Pods-Athletics.debug.xcconfig */,
+				BF8A320E446C9BCC99D6BB8F /* Pods-Athletics.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		AD6102181BE2E6130009A612 /* Athletics */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = AD61023B1BE2E6130009A612 /* Build configuration list for PBXNativeTarget "Athletics" */;
+			buildPhases = (
+				1967AA7F9EFD064E9ACCB053 /* Check Pods Manifest.lock */,
+				AD6102151BE2E6130009A612 /* Sources */,
+				AD6102161BE2E6130009A612 /* Frameworks */,
+				AD6102171BE2E6130009A612 /* Resources */,
+				DC2A3D2BEE50548EB62A5318 /* Embed Pods Frameworks */,
+				4D863255F9DE654C5C6623A7 /* Copy Pods Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = Athletics;
+			productName = Athletics;
+			productReference = AD6102191BE2E6130009A612 /* Athletics.app */;
+			productType = "com.apple.product-type.application";
+		};
+		AD6102301BE2E6130009A612 /* AthleticsTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = AD61023E1BE2E6130009A612 /* Build configuration list for PBXNativeTarget "AthleticsTests" */;
+			buildPhases = (
+				AD61022D1BE2E6130009A612 /* Sources */,
+				AD61022E1BE2E6130009A612 /* Frameworks */,
+				AD61022F1BE2E6130009A612 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				AD6102331BE2E6130009A612 /* PBXTargetDependency */,
+			);
+			name = AthleticsTests;
+			productName = AthleticsTests;
+			productReference = AD6102311BE2E6130009A612 /* AthleticsTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		AD6102111BE2E6130009A612 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0640;
+				ORGANIZATIONNAME = Wambl;
+				TargetAttributes = {
+					AD6102181BE2E6130009A612 = {
+						CreatedOnToolsVersion = 6.4;
+					};
+					AD6102301BE2E6130009A612 = {
+						CreatedOnToolsVersion = 6.4;
+						TestTargetID = AD6102181BE2E6130009A612;
+					};
+				};
+			};
+			buildConfigurationList = AD6102141BE2E6130009A612 /* Build configuration list for PBXProject "Athletics" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = AD6102101BE2E6130009A612;
+			productRefGroup = AD61021A1BE2E6130009A612 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				AD6102181BE2E6130009A612 /* Athletics */,
+				AD6102301BE2E6130009A612 /* AthleticsTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		AD6102171BE2E6130009A612 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				AD6102271BE2E6130009A612 /* Main.storyboard in Resources */,
+				AD61022C1BE2E6130009A612 /* LaunchScreen.xib in Resources */,
+				AD6102291BE2E6130009A612 /* Images.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		AD61022F1BE2E6130009A612 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		1967AA7F9EFD064E9ACCB053 /* Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		4D863255F9DE654C5C6623A7 /* Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Athletics/Pods-Athletics-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		DC2A3D2BEE50548EB62A5318 /* Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Athletics/Pods-Athletics-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		AD6102151BE2E6130009A612 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				AD6102241BE2E6130009A612 /* ViewController.swift in Sources */,
+				AD61021F1BE2E6130009A612 /* AppDelegate.swift in Sources */,
+				AD6102221BE2E6130009A612 /* Athletics.xcdatamodeld in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		AD61022D1BE2E6130009A612 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				AD6102381BE2E6130009A612 /* AthleticsTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		AD6102331BE2E6130009A612 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = AD6102181BE2E6130009A612 /* Athletics */;
+			targetProxy = AD6102321BE2E6130009A612 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		AD6102251BE2E6130009A612 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				AD6102261BE2E6130009A612 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		AD61022A1BE2E6130009A612 /* LaunchScreen.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				AD61022B1BE2E6130009A612 /* Base */,
+			);
+			name = LaunchScreen.xib;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		AD6102391BE2E6130009A612 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.4;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		AD61023A1BE2E6130009A612 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.4;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		AD61023C1BE2E6130009A612 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 9C6A14E6F1A96AFC87044C09 /* Pods-Athletics.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = Athletics/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		AD61023D1BE2E6130009A612 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = BF8A320E446C9BCC99D6BB8F /* Pods-Athletics.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = Athletics/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+		AD61023F1BE2E6130009A612 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+				);
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = AthleticsTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Athletics.app/Athletics";
+			};
+			name = Debug;
+		};
+		AD6102401BE2E6130009A612 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = AthleticsTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Athletics.app/Athletics";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		AD6102141BE2E6130009A612 /* Build configuration list for PBXProject "Athletics" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				AD6102391BE2E6130009A612 /* Debug */,
+				AD61023A1BE2E6130009A612 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		AD61023B1BE2E6130009A612 /* Build configuration list for PBXNativeTarget "Athletics" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				AD61023C1BE2E6130009A612 /* Debug */,
+				AD61023D1BE2E6130009A612 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		AD61023E1BE2E6130009A612 /* Build configuration list for PBXNativeTarget "AthleticsTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				AD61023F1BE2E6130009A612 /* Debug */,
+				AD6102401BE2E6130009A612 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		AD6102201BE2E6130009A612 /* Athletics.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				AD6102211BE2E6130009A612 /* Athletics.xcdatamodel */,
+			);
+			currentVersion = AD6102211BE2E6130009A612 /* Athletics.xcdatamodel */;
+			path = Athletics.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
+	};
+	rootObject = AD6102111BE2E6130009A612 /* Project object */;
+}
