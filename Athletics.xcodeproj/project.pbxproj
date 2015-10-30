@@ -22,6 +22,8 @@
 		AD61025B1BE3D0EB0009A612 /* EventEdit.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD6102591BE3D0EB0009A612 /* EventEdit.swift */; };
 		AD61025C1BE3D0EB0009A612 /* EventEdit.xib in Resources */ = {isa = PBXBuildFile; fileRef = AD61025A1BE3D0EB0009A612 /* EventEdit.xib */; };
 		AD61025E1BE3D32A0009A612 /* EventEnum.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD61025D1BE3D32A0009A612 /* EventEnum.swift */; };
+		AD6102641BE3D9B30009A612 /* Calendar.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD6102621BE3D9B30009A612 /* Calendar.swift */; };
+		AD6102651BE3D9B30009A612 /* Calendar.xib in Resources */ = {isa = PBXBuildFile; fileRef = AD6102631BE3D9B30009A612 /* Calendar.xib */; };
 		E0D926ABB0E9AB0D01A78AA6 /* Pods_Athletics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 532598E9C0E224A2EA27CC0C /* Pods_Athletics.framework */; };
 /* End PBXBuildFile section */
 
@@ -57,6 +59,8 @@
 		AD6102591BE3D0EB0009A612 /* EventEdit.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EventEdit.swift; sourceTree = "<group>"; };
 		AD61025A1BE3D0EB0009A612 /* EventEdit.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = EventEdit.xib; sourceTree = "<group>"; };
 		AD61025D1BE3D32A0009A612 /* EventEnum.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EventEnum.swift; sourceTree = "<group>"; };
+		AD6102621BE3D9B30009A612 /* Calendar.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Calendar.swift; sourceTree = "<group>"; };
+		AD6102631BE3D9B30009A612 /* Calendar.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = Calendar.xib; sourceTree = "<group>"; };
 		BF8A320E446C9BCC99D6BB8F /* Pods-Athletics.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Athletics.release.xcconfig"; path = "Pods/Target Support Files/Pods-Athletics/Pods-Athletics.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -110,6 +114,7 @@
 		AD61021B1BE2E6130009A612 /* Athletics */ = {
 			isa = PBXGroup;
 			children = (
+				AD6102611BE3D9950009A612 /* Components */,
 				AD61024F1BE2F4430009A612 /* DB */,
 				AD6102411BE2E7B20009A612 /* Home */,
 				AD61021E1BE2E6130009A612 /* AppDelegate.swift */,
@@ -192,6 +197,23 @@
 				AD61025A1BE3D0EB0009A612 /* EventEdit.xib */,
 			);
 			name = Event;
+			sourceTree = "<group>";
+		};
+		AD6102611BE3D9950009A612 /* Components */ = {
+			isa = PBXGroup;
+			children = (
+				AD6102681BE3DD3B0009A612 /* Calendar */,
+			);
+			name = Components;
+			sourceTree = "<group>";
+		};
+		AD6102681BE3DD3B0009A612 /* Calendar */ = {
+			isa = PBXGroup;
+			children = (
+				AD6102621BE3D9B30009A612 /* Calendar.swift */,
+				AD6102631BE3D9B30009A612 /* Calendar.xib */,
+			);
+			name = Calendar;
 			sourceTree = "<group>";
 		};
 		FE781CA8377A50A959787B59 /* Pods */ = {
@@ -292,6 +314,7 @@
 				AD6102491BE2EBA60009A612 /* Home.xib in Resources */,
 				AD61024E1BE2EC430009A612 /* Schedule.xib in Resources */,
 				AD6102291BE2E6130009A612 /* Images.xcassets in Resources */,
+				AD6102651BE3D9B30009A612 /* Calendar.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -358,6 +381,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				AD61021F1BE2E6130009A612 /* AppDelegate.swift in Sources */,
+				AD6102641BE3D9B30009A612 /* Calendar.swift in Sources */,
 				AD61025E1BE3D32A0009A612 /* EventEnum.swift in Sources */,
 				AD6102481BE2EBA60009A612 /* Home.swift in Sources */,
 				AD61024D1BE2EC430009A612 /* Schedule.swift in Sources */,

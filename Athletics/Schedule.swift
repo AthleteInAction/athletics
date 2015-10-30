@@ -17,7 +17,7 @@ class Schedule: UITableViewController {
         
         for i in 1 ... 6 {
             
-            let e = Event(title: "Event #\(i)", start_date: NSDate())
+            let e = Event(key: Event.Key.Practice,title: "Event #\(i)", start_date: NSDate())
             
             events.append(e)
             
