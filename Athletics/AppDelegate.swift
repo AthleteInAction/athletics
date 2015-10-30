@@ -8,6 +8,7 @@
 
 import UIKit
 import CoreData
+import Parse
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
@@ -19,7 +20,15 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         
         // Override point for customization after application launch.
         
+        Parse.setApplicationId("SLi9cyLXbRAH3OKFpbnszCWwZbt9qzxEcUJIjqp6",
+            clientKey: "7aBQUnSP77eNL2tM6Pb6irX0KjytKrTHtf2hfJ9N")
         
+        window = UIWindow(frame: UIScreen.mainScreen().bounds)
+        
+        let home = Home(nibName: "Home", bundle: nil)
+        
+        window?.rootViewController = home
+        window?.makeKeyAndVisible()
         
         return true
         

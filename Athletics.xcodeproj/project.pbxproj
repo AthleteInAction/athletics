@@ -9,12 +9,20 @@
 /* Begin PBXBuildFile section */
 		AD61021F1BE2E6130009A612 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD61021E1BE2E6130009A612 /* AppDelegate.swift */; };
 		AD6102221BE2E6130009A612 /* Athletics.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = AD6102201BE2E6130009A612 /* Athletics.xcdatamodeld */; };
-		AD6102241BE2E6130009A612 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD6102231BE2E6130009A612 /* ViewController.swift */; };
-		AD6102271BE2E6130009A612 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AD6102251BE2E6130009A612 /* Main.storyboard */; };
 		AD6102291BE2E6130009A612 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AD6102281BE2E6130009A612 /* Images.xcassets */; };
 		AD61022C1BE2E6130009A612 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = AD61022A1BE2E6130009A612 /* LaunchScreen.xib */; };
 		AD6102381BE2E6130009A612 /* AthleticsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD6102371BE2E6130009A612 /* AthleticsTests.swift */; };
-		E0D926ABB0E9AB0D01A78AA6 /* Pods_Athletics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 532598E9C0E224A2EA27CC0C /* Pods_Athletics.framework */; settings = {ATTRIBUTES = (Weak, ); }; };
+		AD6102481BE2EBA60009A612 /* Home.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD6102461BE2EBA60009A612 /* Home.swift */; };
+		AD6102491BE2EBA60009A612 /* Home.xib in Resources */ = {isa = PBXBuildFile; fileRef = AD6102471BE2EBA60009A612 /* Home.xib */; };
+		AD61024D1BE2EC430009A612 /* Schedule.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD61024B1BE2EC430009A612 /* Schedule.swift */; };
+		AD61024E1BE2EC430009A612 /* Schedule.xib in Resources */ = {isa = PBXBuildFile; fileRef = AD61024C1BE2EC430009A612 /* Schedule.xib */; };
+		AD6102511BE2F45E0009A612 /* Event.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD6102501BE2F45E0009A612 /* Event.swift */; };
+		AD6102551BE369360009A612 /* More.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD6102531BE369360009A612 /* More.swift */; };
+		AD6102561BE369360009A612 /* More.xib in Resources */ = {isa = PBXBuildFile; fileRef = AD6102541BE369360009A612 /* More.xib */; };
+		AD61025B1BE3D0EB0009A612 /* EventEdit.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD6102591BE3D0EB0009A612 /* EventEdit.swift */; };
+		AD61025C1BE3D0EB0009A612 /* EventEdit.xib in Resources */ = {isa = PBXBuildFile; fileRef = AD61025A1BE3D0EB0009A612 /* EventEdit.xib */; };
+		AD61025E1BE3D32A0009A612 /* EventEnum.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD61025D1BE3D32A0009A612 /* EventEnum.swift */; };
+		E0D926ABB0E9AB0D01A78AA6 /* Pods_Athletics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 532598E9C0E224A2EA27CC0C /* Pods_Athletics.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -34,13 +42,21 @@
 		AD61021D1BE2E6130009A612 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		AD61021E1BE2E6130009A612 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		AD6102211BE2E6130009A612 /* Athletics.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Athletics.xcdatamodel; sourceTree = "<group>"; };
-		AD6102231BE2E6130009A612 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		AD6102261BE2E6130009A612 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		AD6102281BE2E6130009A612 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		AD61022B1BE2E6130009A612 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
 		AD6102311BE2E6130009A612 /* AthleticsTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = AthleticsTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		AD6102361BE2E6130009A612 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		AD6102371BE2E6130009A612 /* AthleticsTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AthleticsTests.swift; sourceTree = "<group>"; };
+		AD6102461BE2EBA60009A612 /* Home.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Home.swift; sourceTree = "<group>"; };
+		AD6102471BE2EBA60009A612 /* Home.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = Home.xib; sourceTree = "<group>"; };
+		AD61024B1BE2EC430009A612 /* Schedule.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Schedule.swift; sourceTree = "<group>"; };
+		AD61024C1BE2EC430009A612 /* Schedule.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = Schedule.xib; sourceTree = "<group>"; };
+		AD6102501BE2F45E0009A612 /* Event.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Event.swift; sourceTree = "<group>"; };
+		AD6102531BE369360009A612 /* More.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = More.swift; sourceTree = "<group>"; };
+		AD6102541BE369360009A612 /* More.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = More.xib; sourceTree = "<group>"; };
+		AD6102591BE3D0EB0009A612 /* EventEdit.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EventEdit.swift; sourceTree = "<group>"; };
+		AD61025A1BE3D0EB0009A612 /* EventEdit.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = EventEdit.xib; sourceTree = "<group>"; };
+		AD61025D1BE3D32A0009A612 /* EventEnum.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EventEnum.swift; sourceTree = "<group>"; };
 		BF8A320E446C9BCC99D6BB8F /* Pods-Athletics.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Athletics.release.xcconfig"; path = "Pods/Target Support Files/Pods-Athletics/Pods-Athletics.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -94,9 +110,9 @@
 		AD61021B1BE2E6130009A612 /* Athletics */ = {
 			isa = PBXGroup;
 			children = (
+				AD61024F1BE2F4430009A612 /* DB */,
+				AD6102411BE2E7B20009A612 /* Home */,
 				AD61021E1BE2E6130009A612 /* AppDelegate.swift */,
-				AD6102231BE2E6130009A612 /* ViewController.swift */,
-				AD6102251BE2E6130009A612 /* Main.storyboard */,
 				AD6102281BE2E6130009A612 /* Images.xcassets */,
 				AD61022A1BE2E6130009A612 /* LaunchScreen.xib */,
 				AD6102201BE2E6130009A612 /* Athletics.xcdatamodeld */,
@@ -128,6 +144,54 @@
 				AD6102361BE2E6130009A612 /* Info.plist */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		AD6102411BE2E7B20009A612 /* Home */ = {
+			isa = PBXGroup;
+			children = (
+				AD6102521BE3691D0009A612 /* More */,
+				AD61024A1BE2EC0A0009A612 /* Schedule */,
+				AD6102461BE2EBA60009A612 /* Home.swift */,
+				AD6102471BE2EBA60009A612 /* Home.xib */,
+			);
+			name = Home;
+			sourceTree = "<group>";
+		};
+		AD61024A1BE2EC0A0009A612 /* Schedule */ = {
+			isa = PBXGroup;
+			children = (
+				AD61024B1BE2EC430009A612 /* Schedule.swift */,
+				AD61024C1BE2EC430009A612 /* Schedule.xib */,
+			);
+			name = Schedule;
+			sourceTree = "<group>";
+		};
+		AD61024F1BE2F4430009A612 /* DB */ = {
+			isa = PBXGroup;
+			children = (
+				AD6102581BE3D0C80009A612 /* Event */,
+			);
+			name = DB;
+			sourceTree = "<group>";
+		};
+		AD6102521BE3691D0009A612 /* More */ = {
+			isa = PBXGroup;
+			children = (
+				AD6102531BE369360009A612 /* More.swift */,
+				AD6102541BE369360009A612 /* More.xib */,
+			);
+			name = More;
+			sourceTree = "<group>";
+		};
+		AD6102581BE3D0C80009A612 /* Event */ = {
+			isa = PBXGroup;
+			children = (
+				AD6102501BE2F45E0009A612 /* Event.swift */,
+				AD61025D1BE3D32A0009A612 /* EventEnum.swift */,
+				AD6102591BE3D0EB0009A612 /* EventEdit.swift */,
+				AD61025A1BE3D0EB0009A612 /* EventEdit.xib */,
+			);
+			name = Event;
 			sourceTree = "<group>";
 		};
 		FE781CA8377A50A959787B59 /* Pods */ = {
@@ -222,8 +286,11 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				AD6102271BE2E6130009A612 /* Main.storyboard in Resources */,
+				AD61025C1BE3D0EB0009A612 /* EventEdit.xib in Resources */,
 				AD61022C1BE2E6130009A612 /* LaunchScreen.xib in Resources */,
+				AD6102561BE369360009A612 /* More.xib in Resources */,
+				AD6102491BE2EBA60009A612 /* Home.xib in Resources */,
+				AD61024E1BE2EC430009A612 /* Schedule.xib in Resources */,
 				AD6102291BE2E6130009A612 /* Images.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -290,9 +357,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				AD6102241BE2E6130009A612 /* ViewController.swift in Sources */,
 				AD61021F1BE2E6130009A612 /* AppDelegate.swift in Sources */,
+				AD61025E1BE3D32A0009A612 /* EventEnum.swift in Sources */,
+				AD6102481BE2EBA60009A612 /* Home.swift in Sources */,
+				AD61024D1BE2EC430009A612 /* Schedule.swift in Sources */,
 				AD6102221BE2E6130009A612 /* Athletics.xcdatamodeld in Sources */,
+				AD6102551BE369360009A612 /* More.swift in Sources */,
+				AD61025B1BE3D0EB0009A612 /* EventEdit.swift in Sources */,
+				AD6102511BE2F45E0009A612 /* Event.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -315,14 +387,6 @@
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
-		AD6102251BE2E6130009A612 /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				AD6102261BE2E6130009A612 /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
 		AD61022A1BE2E6130009A612 /* LaunchScreen.xib */ = {
 			isa = PBXVariantGroup;
 			children = (
