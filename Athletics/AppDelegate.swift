@@ -10,22 +10,35 @@ import UIKit
 import CoreData
 import Parse
 
+var MS: UIStoryboard!
+var ADMIN: Role?
+var home: Home?
+
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
 
     var window: UIWindow?
-
-
+    
     func application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> Bool {
         
         // Override point for customization after application launch.
+        
+        MS = UIStoryboard(name: "Main", bundle: nil)
+        
+        Parse.enableLocalDatastore()
+        
+        Player.registerSubclass()
+        Role.registerSubclass()
+        User.registerSubclass()
+        Team.registerSubclass()
+        Event.registerSubclass()
         
         Parse.setApplicationId("SLi9cyLXbRAH3OKFpbnszCWwZbt9qzxEcUJIjqp6",
             clientKey: "7aBQUnSP77eNL2tM6Pb6irX0KjytKrTHtf2hfJ9N")
         
         window = UIWindow(frame: UIScreen.mainScreen().bounds)
         
-        let home = Home(nibName: "Home", bundle: nil)
+        home = Home(nibName: "Home", bundle: nil)
         
         window?.rootViewController = home
         window?.makeKeyAndVisible()
@@ -49,7 +62,24 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     }
 
     func applicationDidBecomeActive(application: UIApplication) {
+        
         // Restart any tasks that were paused (or not yet started) while the application was inactive. If the application was previously in the background, optionally refresh the user interface.
+        
+        if let home = home {
+            
+            if let schedule = home.schedule {
+                
+                if schedule.loaded {
+                    
+                    schedule.date = NSDate()
+                    schedule.setDisplay()
+                    
+                }
+                
+            }
+            
+        }
+        
     }
 
     func applicationWillTerminate(application: UIApplication) {
@@ -63,7 +93,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     lazy var applicationDocumentsDirectory: NSURL = {
         // The directory the application uses to store the Core Data store file. This code uses a directory named "com.wambl.Athletics" in the application's documents Application Support directory.
         let urls = NSFileManager.defaultManager().URLsForDirectory(.DocumentDirectory, inDomains: .UserDomainMask)
-        return urls[urls.count-1] as! NSURL
+        return urls[urls.count-1] 
     }()
 
     lazy var managedObjectModel: NSManagedObjectModel = {
@@ -79,7 +109,10 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         let url = self.applicationDocumentsDirectory.URLByAppendingPathComponent("Athletics.sqlite")
         var error: NSError? = nil
         var failureReason = "There was an error creating or loading the application's saved data."
-        if coordinator!.addPersistentStoreWithType(NSSQLiteStoreType, configuration: nil, URL: url, options: nil, error: &error) == nil {
+        do {
+            try coordinator!.addPersistentStoreWithType(NSSQLiteStoreType, configuration: nil, URL: url, options: nil)
+        } catch var error1 as NSError {
+            error = error1
             coordinator = nil
             // Report any error we got.
             var dict = [String: AnyObject]()
@@ -91,6 +124,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
             // abort() causes the application to generate a crash log and terminate. You should not use this function in a shipping application, although it may be useful during development.
             NSLog("Unresolved error \(error), \(error!.userInfo)")
             abort()
+        } catch {
+            fatalError()
         }
         
         return coordinator
@@ -112,11 +147,16 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     func saveContext () {
         if let moc = self.managedObjectContext {
             var error: NSError? = nil
-            if moc.hasChanges && !moc.save(&error) {
-                // Replace this implementation with code to handle the error appropriately.
-                // abort() causes the application to generate a crash log and terminate. You should not use this function in a shipping application, although it may be useful during development.
-                NSLog("Unresolved error \(error), \(error!.userInfo)")
-                abort()
+            if moc.hasChanges {
+                do {
+                    try moc.save()
+                } catch let error1 as NSError {
+                    error = error1
+                    // Replace this implementation with code to handle the error appropriately.
+                    // abort() causes the application to generate a crash log and terminate. You should not use this function in a shipping application, although it may be useful during development.
+                    NSLog("Unresolved error \(error), \(error!.userInfo)")
+                    abort()
+                }
             }
         }
     }

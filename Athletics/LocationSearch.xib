@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="9059" systemVersion="15B42" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9049"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="LocationSearch" customModule="Athletics" customModuleProvider="target">
+            <connections>
+                <outlet property="search" destination="7nn-Ta-klc" id="hKx-ag-Bhh"/>
+                <outlet property="table" destination="20n-QZ-xs3" id="bat-Ee-F7e"/>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="20n-QZ-xs3">
+                    <rect key="frame" x="0.0" y="44" width="375" height="623"/>
+                    <animations/>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                </tableView>
+                <searchBar contentMode="redraw" placeholder="Search Locations" translatesAutoresizingMaskIntoConstraints="NO" id="7nn-Ta-klc">
+                    <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                    <animations/>
+                    <textInputTraits key="textInputTraits"/>
+                </searchBar>
+            </subviews>
+            <animations/>
+            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+            <constraints>
+                <constraint firstItem="7nn-Ta-klc" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="836-wg-phq"/>
+                <constraint firstAttribute="trailing" secondItem="20n-QZ-xs3" secondAttribute="trailing" id="8XU-tY-8LX"/>
+                <constraint firstAttribute="trailing" secondItem="7nn-Ta-klc" secondAttribute="trailing" id="8rl-km-PJv"/>
+                <constraint firstItem="7nn-Ta-klc" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" id="AcK-dB-Xlb"/>
+                <constraint firstAttribute="bottom" secondItem="20n-QZ-xs3" secondAttribute="bottom" id="Qsx-UG-ZTr"/>
+                <constraint firstItem="20n-QZ-xs3" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="Z1d-Xp-iyC"/>
+                <constraint firstItem="20n-QZ-xs3" firstAttribute="top" secondItem="7nn-Ta-klc" secondAttribute="bottom" id="mRM-Jx-E3B"/>
+            </constraints>
+            <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
+        </view>
+    </objects>
+</document>

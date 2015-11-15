@@ -5,8 +5,9 @@ use_frameworks!
 target 'Athletics' do
 
 	pod 'Parse'
-	pod 'Alamofire','~> 1.3.1'
-	pod 'SwiftyJSON','~> 2.2.1'
+	pod 'Alamofire'
+	pod 'SwiftyJSON'
+	# pod 'CVCalendar', '~> 1.2.7'
 
 end
 

@@ -14,14 +14,54 @@
 		AD6102381BE2E6130009A612 /* AthleticsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD6102371BE2E6130009A612 /* AthleticsTests.swift */; };
 		AD6102481BE2EBA60009A612 /* Home.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD6102461BE2EBA60009A612 /* Home.swift */; };
 		AD6102491BE2EBA60009A612 /* Home.xib in Resources */ = {isa = PBXBuildFile; fileRef = AD6102471BE2EBA60009A612 /* Home.xib */; };
-		AD61024D1BE2EC430009A612 /* Schedule.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD61024B1BE2EC430009A612 /* Schedule.swift */; };
-		AD61024E1BE2EC430009A612 /* Schedule.xib in Resources */ = {isa = PBXBuildFile; fileRef = AD61024C1BE2EC430009A612 /* Schedule.xib */; };
 		AD6102511BE2F45E0009A612 /* Event.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD6102501BE2F45E0009A612 /* Event.swift */; };
-		AD6102551BE369360009A612 /* More.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD6102531BE369360009A612 /* More.swift */; };
-		AD6102561BE369360009A612 /* More.xib in Resources */ = {isa = PBXBuildFile; fileRef = AD6102541BE369360009A612 /* More.xib */; };
-		AD61025B1BE3D0EB0009A612 /* EventEdit.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD6102591BE3D0EB0009A612 /* EventEdit.swift */; };
-		AD61025C1BE3D0EB0009A612 /* EventEdit.xib in Resources */ = {isa = PBXBuildFile; fileRef = AD61025A1BE3D0EB0009A612 /* EventEdit.xib */; };
-		AD61025E1BE3D32A0009A612 /* EventEnum.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD61025D1BE3D32A0009A612 /* EventEnum.swift */; };
+		AD6102641BE3D9B30009A612 /* Calendar.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD6102621BE3D9B30009A612 /* Calendar.swift */; };
+		AD6102651BE3D9B30009A612 /* Calendar.xib in Resources */ = {isa = PBXBuildFile; fileRef = AD6102631BE3D9B30009A612 /* Calendar.xib */; };
+		AD62542D1BE50B0700A2F451 /* EventEdit.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD62542B1BE50B0700A2F451 /* EventEdit.swift */; };
+		AD6254301BE77BE200A2F451 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AD62542F1BE77BE200A2F451 /* Main.storyboard */; };
+		AD62543A1BE7A46400A2F451 /* Team.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD6254391BE7A46400A2F451 /* Team.swift */; };
+		AD62543E1BE7B68000A2F451 /* TimeSelector.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD62543C1BE7B68000A2F451 /* TimeSelector.swift */; };
+		AD62543F1BE7B68000A2F451 /* TimeSelector.xib in Resources */ = {isa = PBXBuildFile; fileRef = AD62543D1BE7B68000A2F451 /* TimeSelector.xib */; };
+		AD6254431BE7C1FC00A2F451 /* DateSelector.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD6254411BE7C1FC00A2F451 /* DateSelector.swift */; };
+		AD6254441BE7C1FC00A2F451 /* DateSelector.xib in Resources */ = {isa = PBXBuildFile; fileRef = AD6254421BE7C1FC00A2F451 /* DateSelector.xib */; };
+		AD6254481BE7C83600A2F451 /* LocationSearch.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD6254461BE7C83600A2F451 /* LocationSearch.swift */; };
+		AD6254491BE7C83600A2F451 /* LocationSearch.xib in Resources */ = {isa = PBXBuildFile; fileRef = AD6254471BE7C83600A2F451 /* LocationSearch.xib */; };
+		AD62544E1BE92ACA00A2F451 /* Globals.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD62544D1BE92ACA00A2F451 /* Globals.swift */; };
+		AD6254551BE9443B00A2F451 /* UsersTable.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD6254531BE9443B00A2F451 /* UsersTable.swift */; };
+		AD6254561BE9443B00A2F451 /* UsersTable.xib in Resources */ = {isa = PBXBuildFile; fileRef = AD6254541BE9443B00A2F451 /* UsersTable.xib */; };
+		AD62545E1BE944C900A2F451 /* UserEdit.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD62545C1BE944C900A2F451 /* UserEdit.swift */; };
+		AD62545F1BE944C900A2F451 /* UserEdit.xib in Resources */ = {isa = PBXBuildFile; fileRef = AD62545D1BE944C900A2F451 /* UserEdit.xib */; };
+		AD6254611BE9461100A2F451 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD6254601BE9461100A2F451 /* User.swift */; };
+		AD6254651BE9A04A00A2F451 /* LoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD6254631BE9A04A00A2F451 /* LoginView.swift */; };
+		AD6254661BE9A04A00A2F451 /* LoginView.xib in Resources */ = {isa = PBXBuildFile; fileRef = AD6254641BE9A04A00A2F451 /* LoginView.xib */; };
+		AD6254701BEAA8AB00A2F451 /* Role.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD62546F1BEAA8AB00A2F451 /* Role.swift */; };
+		AD6254731BEABEEC00A2F451 /* UserAccess.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD6254711BEABEEC00A2F451 /* UserAccess.swift */; };
+		AD6254741BEABEEC00A2F451 /* UserAccess.xib in Resources */ = {isa = PBXBuildFile; fileRef = AD6254721BEABEEC00A2F451 /* UserAccess.xib */; };
+		AD62547C1BEAE36300A2F451 /* TeamsTable.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD62547A1BEAE36300A2F451 /* TeamsTable.swift */; };
+		AD62547D1BEAE36300A2F451 /* TeamsTable.xib in Resources */ = {isa = PBXBuildFile; fileRef = AD62547B1BEAE36300A2F451 /* TeamsTable.xib */; };
+		AD6254811BEAF22000A2F451 /* TeamEdit.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD62547F1BEAF22000A2F451 /* TeamEdit.swift */; };
+		AD6254821BEAF22000A2F451 /* TeamEdit.xib in Resources */ = {isa = PBXBuildFile; fileRef = AD6254801BEAF22000A2F451 /* TeamEdit.xib */; };
+		AD6254851BEBF86600A2F451 /* UserAccessCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD6254831BEBF86600A2F451 /* UserAccessCell.swift */; };
+		AD6254861BEBF86600A2F451 /* UserAccessCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = AD6254841BEBF86600A2F451 /* UserAccessCell.xib */; };
+		AD6254891BEE8F4700A2F451 /* More.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD6254871BEE8F4700A2F451 /* More.swift */; };
+		AD62548A1BEE8F4700A2F451 /* More.xib in Resources */ = {isa = PBXBuildFile; fileRef = AD6254881BEE8F4700A2F451 /* More.xib */; };
+		AD62548D1BEEA9E200A2F451 /* Schedule.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD62548B1BEEA9E200A2F451 /* Schedule.swift */; };
+		AD62548E1BEEA9E200A2F451 /* Schedule.xib in Resources */ = {isa = PBXBuildFile; fileRef = AD62548C1BEEA9E200A2F451 /* Schedule.xib */; };
+		AD6254911BEFE45F00A2F451 /* Player.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD6254901BEFE45F00A2F451 /* Player.swift */; };
+		AD6254951BEFE57200A2F451 /* Roster.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD6254931BEFE57200A2F451 /* Roster.swift */; };
+		AD6254961BEFE57200A2F451 /* Roster.xib in Resources */ = {isa = PBXBuildFile; fileRef = AD6254941BEFE57200A2F451 /* Roster.xib */; };
+		AD6254991BEFEBA300A2F451 /* PlayerEdit.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD6254971BEFEBA300A2F451 /* PlayerEdit.swift */; };
+		AD62549A1BEFEBA300A2F451 /* PlayerEdit.xib in Resources */ = {isa = PBXBuildFile; fileRef = AD6254981BEFEBA300A2F451 /* PlayerEdit.xib */; };
+		AD62549D1BF0017900A2F451 /* Dailey.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD62549B1BF0017900A2F451 /* Dailey.swift */; };
+		AD62549E1BF0017900A2F451 /* Dailey.xib in Resources */ = {isa = PBXBuildFile; fileRef = AD62549C1BF0017900A2F451 /* Dailey.xib */; };
+		AD6254A21BF0100E00A2F451 /* GameEventCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD6254A01BF0100E00A2F451 /* GameEventCell.swift */; };
+		AD6254A31BF0100E00A2F451 /* GameEventCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = AD6254A11BF0100E00A2F451 /* GameEventCell.xib */; };
+		AD6254A61BF1633400A2F451 /* ScheduleGameCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD6254A41BF1633400A2F451 /* ScheduleGameCell.swift */; };
+		AD6254A71BF1633400A2F451 /* ScheduleGameCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = AD6254A51BF1633400A2F451 /* ScheduleGameCell.xib */; };
+		ADD3FDA11BF1B92E0058BCFD /* EventDetail.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADD3FD9F1BF1B92E0058BCFD /* EventDetail.swift */; };
+		ADD3FDA21BF1B92E0058BCFD /* EventDetail.xib in Resources */ = {isa = PBXBuildFile; fileRef = ADD3FDA01BF1B92E0058BCFD /* EventDetail.xib */; };
+		ADD3FDA51BF2E4610058BCFD /* ScoreCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADD3FDA31BF2E4610058BCFD /* ScoreCell.swift */; };
+		ADD3FDA61BF2E4610058BCFD /* ScoreCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = ADD3FDA41BF2E4610058BCFD /* ScoreCell.xib */; };
 		E0D926ABB0E9AB0D01A78AA6 /* Pods_Athletics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 532598E9C0E224A2EA27CC0C /* Pods_Athletics.framework */; };
 /* End PBXBuildFile section */
 
@@ -49,14 +89,55 @@
 		AD6102371BE2E6130009A612 /* AthleticsTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AthleticsTests.swift; sourceTree = "<group>"; };
 		AD6102461BE2EBA60009A612 /* Home.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Home.swift; sourceTree = "<group>"; };
 		AD6102471BE2EBA60009A612 /* Home.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = Home.xib; sourceTree = "<group>"; };
-		AD61024B1BE2EC430009A612 /* Schedule.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Schedule.swift; sourceTree = "<group>"; };
-		AD61024C1BE2EC430009A612 /* Schedule.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = Schedule.xib; sourceTree = "<group>"; };
 		AD6102501BE2F45E0009A612 /* Event.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Event.swift; sourceTree = "<group>"; };
-		AD6102531BE369360009A612 /* More.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = More.swift; sourceTree = "<group>"; };
-		AD6102541BE369360009A612 /* More.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = More.xib; sourceTree = "<group>"; };
-		AD6102591BE3D0EB0009A612 /* EventEdit.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EventEdit.swift; sourceTree = "<group>"; };
-		AD61025A1BE3D0EB0009A612 /* EventEdit.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = EventEdit.xib; sourceTree = "<group>"; };
-		AD61025D1BE3D32A0009A612 /* EventEnum.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EventEnum.swift; sourceTree = "<group>"; };
+		AD6102621BE3D9B30009A612 /* Calendar.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Calendar.swift; sourceTree = "<group>"; };
+		AD6102631BE3D9B30009A612 /* Calendar.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = Calendar.xib; sourceTree = "<group>"; };
+		AD62542B1BE50B0700A2F451 /* EventEdit.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EventEdit.swift; sourceTree = "<group>"; };
+		AD62542F1BE77BE200A2F451 /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = Main.storyboard; path = ../Main.storyboard; sourceTree = "<group>"; };
+		AD6254391BE7A46400A2F451 /* Team.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Team.swift; sourceTree = "<group>"; };
+		AD62543C1BE7B68000A2F451 /* TimeSelector.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TimeSelector.swift; sourceTree = "<group>"; };
+		AD62543D1BE7B68000A2F451 /* TimeSelector.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = TimeSelector.xib; sourceTree = "<group>"; };
+		AD6254411BE7C1FC00A2F451 /* DateSelector.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DateSelector.swift; sourceTree = "<group>"; };
+		AD6254421BE7C1FC00A2F451 /* DateSelector.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = DateSelector.xib; sourceTree = "<group>"; };
+		AD6254461BE7C83600A2F451 /* LocationSearch.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LocationSearch.swift; sourceTree = "<group>"; };
+		AD6254471BE7C83600A2F451 /* LocationSearch.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = LocationSearch.xib; sourceTree = "<group>"; };
+		AD62544D1BE92ACA00A2F451 /* Globals.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Globals.swift; sourceTree = "<group>"; };
+		AD62544F1BE92DBE00A2F451 /* Athletics-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Athletics-Bridging-Header.h"; sourceTree = "<group>"; };
+		AD6254531BE9443B00A2F451 /* UsersTable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UsersTable.swift; sourceTree = "<group>"; };
+		AD6254541BE9443B00A2F451 /* UsersTable.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = UsersTable.xib; sourceTree = "<group>"; };
+		AD62545C1BE944C900A2F451 /* UserEdit.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserEdit.swift; sourceTree = "<group>"; };
+		AD62545D1BE944C900A2F451 /* UserEdit.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = UserEdit.xib; sourceTree = "<group>"; };
+		AD6254601BE9461100A2F451 /* User.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
+		AD6254631BE9A04A00A2F451 /* LoginView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginView.swift; sourceTree = "<group>"; };
+		AD6254641BE9A04A00A2F451 /* LoginView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = LoginView.xib; sourceTree = "<group>"; };
+		AD62546F1BEAA8AB00A2F451 /* Role.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Role.swift; sourceTree = "<group>"; };
+		AD6254711BEABEEC00A2F451 /* UserAccess.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserAccess.swift; sourceTree = "<group>"; };
+		AD6254721BEABEEC00A2F451 /* UserAccess.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = UserAccess.xib; sourceTree = "<group>"; };
+		AD62547A1BEAE36300A2F451 /* TeamsTable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TeamsTable.swift; sourceTree = "<group>"; };
+		AD62547B1BEAE36300A2F451 /* TeamsTable.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = TeamsTable.xib; sourceTree = "<group>"; };
+		AD62547F1BEAF22000A2F451 /* TeamEdit.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TeamEdit.swift; sourceTree = "<group>"; };
+		AD6254801BEAF22000A2F451 /* TeamEdit.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = TeamEdit.xib; sourceTree = "<group>"; };
+		AD6254831BEBF86600A2F451 /* UserAccessCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserAccessCell.swift; sourceTree = "<group>"; };
+		AD6254841BEBF86600A2F451 /* UserAccessCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = UserAccessCell.xib; sourceTree = "<group>"; };
+		AD6254871BEE8F4700A2F451 /* More.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = More.swift; sourceTree = "<group>"; };
+		AD6254881BEE8F4700A2F451 /* More.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = More.xib; sourceTree = "<group>"; };
+		AD62548B1BEEA9E200A2F451 /* Schedule.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Schedule.swift; sourceTree = "<group>"; };
+		AD62548C1BEEA9E200A2F451 /* Schedule.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = Schedule.xib; sourceTree = "<group>"; };
+		AD6254901BEFE45F00A2F451 /* Player.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Player.swift; sourceTree = "<group>"; };
+		AD6254931BEFE57200A2F451 /* Roster.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Roster.swift; sourceTree = "<group>"; };
+		AD6254941BEFE57200A2F451 /* Roster.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = Roster.xib; sourceTree = "<group>"; };
+		AD6254971BEFEBA300A2F451 /* PlayerEdit.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PlayerEdit.swift; sourceTree = "<group>"; };
+		AD6254981BEFEBA300A2F451 /* PlayerEdit.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = PlayerEdit.xib; sourceTree = "<group>"; };
+		AD62549B1BF0017900A2F451 /* Dailey.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Dailey.swift; sourceTree = "<group>"; };
+		AD62549C1BF0017900A2F451 /* Dailey.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = Dailey.xib; sourceTree = "<group>"; };
+		AD6254A01BF0100E00A2F451 /* GameEventCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GameEventCell.swift; sourceTree = "<group>"; };
+		AD6254A11BF0100E00A2F451 /* GameEventCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = GameEventCell.xib; sourceTree = "<group>"; };
+		AD6254A41BF1633400A2F451 /* ScheduleGameCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ScheduleGameCell.swift; sourceTree = "<group>"; };
+		AD6254A51BF1633400A2F451 /* ScheduleGameCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ScheduleGameCell.xib; sourceTree = "<group>"; };
+		ADD3FD9F1BF1B92E0058BCFD /* EventDetail.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EventDetail.swift; sourceTree = "<group>"; };
+		ADD3FDA01BF1B92E0058BCFD /* EventDetail.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = EventDetail.xib; sourceTree = "<group>"; };
+		ADD3FDA31BF2E4610058BCFD /* ScoreCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ScoreCell.swift; sourceTree = "<group>"; };
+		ADD3FDA41BF2E4610058BCFD /* ScoreCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ScoreCell.xib; sourceTree = "<group>"; };
 		BF8A320E446C9BCC99D6BB8F /* Pods-Athletics.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Athletics.release.xcconfig"; path = "Pods/Target Support Files/Pods-Athletics/Pods-Athletics.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -110,9 +191,12 @@
 		AD61021B1BE2E6130009A612 /* Athletics */ = {
 			isa = PBXGroup;
 			children = (
+				AD62544C1BE92ABB00A2F451 /* Tools */,
+				AD6102611BE3D9950009A612 /* Components */,
 				AD61024F1BE2F4430009A612 /* DB */,
 				AD6102411BE2E7B20009A612 /* Home */,
 				AD61021E1BE2E6130009A612 /* AppDelegate.swift */,
+				AD62542F1BE77BE200A2F451 /* Main.storyboard */,
 				AD6102281BE2E6130009A612 /* Images.xcassets */,
 				AD61022A1BE2E6130009A612 /* LaunchScreen.xib */,
 				AD6102201BE2E6130009A612 /* Athletics.xcdatamodeld */,
@@ -125,6 +209,7 @@
 			isa = PBXGroup;
 			children = (
 				AD61021D1BE2E6130009A612 /* Info.plist */,
+				AD62544F1BE92DBE00A2F451 /* Athletics-Bridging-Header.h */,
 			);
 			name = "Supporting Files";
 			sourceTree = "<group>";
@@ -160,8 +245,11 @@
 		AD61024A1BE2EC0A0009A612 /* Schedule */ = {
 			isa = PBXGroup;
 			children = (
-				AD61024B1BE2EC430009A612 /* Schedule.swift */,
-				AD61024C1BE2EC430009A612 /* Schedule.xib */,
+				AD62549F1BF00FEF00A2F451 /* Cells */,
+				AD62548B1BEEA9E200A2F451 /* Schedule.swift */,
+				AD62548C1BEEA9E200A2F451 /* Schedule.xib */,
+				AD62549B1BF0017900A2F451 /* Dailey.swift */,
+				AD62549C1BF0017900A2F451 /* Dailey.xib */,
 			);
 			name = Schedule;
 			sourceTree = "<group>";
@@ -169,6 +257,10 @@
 		AD61024F1BE2F4430009A612 /* DB */ = {
 			isa = PBXGroup;
 			children = (
+				AD62548F1BEFE44700A2F451 /* Player */,
+				AD62546E1BEAA89E00A2F451 /* Roles */,
+				AD62545B1BE944B000A2F451 /* User */,
+				AD6254381BE7A45A00A2F451 /* Team */,
 				AD6102581BE3D0C80009A612 /* Event */,
 			);
 			name = DB;
@@ -177,8 +269,8 @@
 		AD6102521BE3691D0009A612 /* More */ = {
 			isa = PBXGroup;
 			children = (
-				AD6102531BE369360009A612 /* More.swift */,
-				AD6102541BE369360009A612 /* More.xib */,
+				AD6254871BEE8F4700A2F451 /* More.swift */,
+				AD6254881BEE8F4700A2F451 /* More.xib */,
 			);
 			name = More;
 			sourceTree = "<group>";
@@ -187,11 +279,185 @@
 			isa = PBXGroup;
 			children = (
 				AD6102501BE2F45E0009A612 /* Event.swift */,
-				AD61025D1BE3D32A0009A612 /* EventEnum.swift */,
-				AD6102591BE3D0EB0009A612 /* EventEdit.swift */,
-				AD61025A1BE3D0EB0009A612 /* EventEdit.xib */,
+				ADD3FD9E1BF1B8FD0058BCFD /* Detail */,
+				AD62542B1BE50B0700A2F451 /* EventEdit.swift */,
 			);
 			name = Event;
+			sourceTree = "<group>";
+		};
+		AD6102611BE3D9950009A612 /* Components */ = {
+			isa = PBXGroup;
+			children = (
+				AD6254621BE9A02D00A2F451 /* Login */,
+				AD6254521BE9440F00A2F451 /* UsersTable */,
+				AD6254451BE7C81800A2F451 /* LocationSearch */,
+				AD6254401BE7C1E400A2F451 /* DateSelector */,
+				AD62543B1BE7B66500A2F451 /* TimeSelector */,
+				AD6102681BE3DD3B0009A612 /* Calendar */,
+			);
+			name = Components;
+			sourceTree = "<group>";
+		};
+		AD6102681BE3DD3B0009A612 /* Calendar */ = {
+			isa = PBXGroup;
+			children = (
+				AD6102621BE3D9B30009A612 /* Calendar.swift */,
+				AD6102631BE3D9B30009A612 /* Calendar.xib */,
+			);
+			name = Calendar;
+			sourceTree = "<group>";
+		};
+		AD6254381BE7A45A00A2F451 /* Team */ = {
+			isa = PBXGroup;
+			children = (
+				AD6254391BE7A46400A2F451 /* Team.swift */,
+				AD62547E1BEAF20F00A2F451 /* TeamEdit */,
+				AD6254751BEAE2DB00A2F451 /* TeamsTable */,
+			);
+			name = Team;
+			sourceTree = "<group>";
+		};
+		AD62543B1BE7B66500A2F451 /* TimeSelector */ = {
+			isa = PBXGroup;
+			children = (
+				AD62543C1BE7B68000A2F451 /* TimeSelector.swift */,
+				AD62543D1BE7B68000A2F451 /* TimeSelector.xib */,
+			);
+			name = TimeSelector;
+			sourceTree = "<group>";
+		};
+		AD6254401BE7C1E400A2F451 /* DateSelector */ = {
+			isa = PBXGroup;
+			children = (
+				AD6254411BE7C1FC00A2F451 /* DateSelector.swift */,
+				AD6254421BE7C1FC00A2F451 /* DateSelector.xib */,
+			);
+			name = DateSelector;
+			sourceTree = "<group>";
+		};
+		AD6254451BE7C81800A2F451 /* LocationSearch */ = {
+			isa = PBXGroup;
+			children = (
+				AD6254461BE7C83600A2F451 /* LocationSearch.swift */,
+				AD6254471BE7C83600A2F451 /* LocationSearch.xib */,
+			);
+			name = LocationSearch;
+			sourceTree = "<group>";
+		};
+		AD62544C1BE92ABB00A2F451 /* Tools */ = {
+			isa = PBXGroup;
+			children = (
+				AD62544D1BE92ACA00A2F451 /* Globals.swift */,
+			);
+			name = Tools;
+			sourceTree = "<group>";
+		};
+		AD6254521BE9440F00A2F451 /* UsersTable */ = {
+			isa = PBXGroup;
+			children = (
+				AD6254531BE9443B00A2F451 /* UsersTable.swift */,
+				AD6254541BE9443B00A2F451 /* UsersTable.xib */,
+			);
+			name = UsersTable;
+			sourceTree = "<group>";
+		};
+		AD62545B1BE944B000A2F451 /* User */ = {
+			isa = PBXGroup;
+			children = (
+				AD6254601BE9461100A2F451 /* User.swift */,
+				AD6254691BE9D18C00A2F451 /* UserAccess */,
+				AD62545C1BE944C900A2F451 /* UserEdit.swift */,
+				AD62545D1BE944C900A2F451 /* UserEdit.xib */,
+			);
+			name = User;
+			sourceTree = "<group>";
+		};
+		AD6254621BE9A02D00A2F451 /* Login */ = {
+			isa = PBXGroup;
+			children = (
+				AD6254631BE9A04A00A2F451 /* LoginView.swift */,
+				AD6254641BE9A04A00A2F451 /* LoginView.xib */,
+			);
+			name = Login;
+			sourceTree = "<group>";
+		};
+		AD6254691BE9D18C00A2F451 /* UserAccess */ = {
+			isa = PBXGroup;
+			children = (
+				AD6254711BEABEEC00A2F451 /* UserAccess.swift */,
+				AD6254721BEABEEC00A2F451 /* UserAccess.xib */,
+				AD6254831BEBF86600A2F451 /* UserAccessCell.swift */,
+				AD6254841BEBF86600A2F451 /* UserAccessCell.xib */,
+			);
+			name = UserAccess;
+			sourceTree = "<group>";
+		};
+		AD62546E1BEAA89E00A2F451 /* Roles */ = {
+			isa = PBXGroup;
+			children = (
+				AD62546F1BEAA8AB00A2F451 /* Role.swift */,
+			);
+			name = Roles;
+			sourceTree = "<group>";
+		};
+		AD6254751BEAE2DB00A2F451 /* TeamsTable */ = {
+			isa = PBXGroup;
+			children = (
+				AD62547A1BEAE36300A2F451 /* TeamsTable.swift */,
+				AD62547B1BEAE36300A2F451 /* TeamsTable.xib */,
+			);
+			name = TeamsTable;
+			sourceTree = "<group>";
+		};
+		AD62547E1BEAF20F00A2F451 /* TeamEdit */ = {
+			isa = PBXGroup;
+			children = (
+				AD62547F1BEAF22000A2F451 /* TeamEdit.swift */,
+				AD6254801BEAF22000A2F451 /* TeamEdit.xib */,
+			);
+			name = TeamEdit;
+			sourceTree = "<group>";
+		};
+		AD62548F1BEFE44700A2F451 /* Player */ = {
+			isa = PBXGroup;
+			children = (
+				AD6254901BEFE45F00A2F451 /* Player.swift */,
+				AD6254921BEFE55200A2F451 /* Roster */,
+				AD6254971BEFEBA300A2F451 /* PlayerEdit.swift */,
+				AD6254981BEFEBA300A2F451 /* PlayerEdit.xib */,
+			);
+			name = Player;
+			sourceTree = "<group>";
+		};
+		AD6254921BEFE55200A2F451 /* Roster */ = {
+			isa = PBXGroup;
+			children = (
+				AD6254931BEFE57200A2F451 /* Roster.swift */,
+				AD6254941BEFE57200A2F451 /* Roster.xib */,
+			);
+			name = Roster;
+			sourceTree = "<group>";
+		};
+		AD62549F1BF00FEF00A2F451 /* Cells */ = {
+			isa = PBXGroup;
+			children = (
+				AD6254A01BF0100E00A2F451 /* GameEventCell.swift */,
+				AD6254A11BF0100E00A2F451 /* GameEventCell.xib */,
+				AD6254A41BF1633400A2F451 /* ScheduleGameCell.swift */,
+				AD6254A51BF1633400A2F451 /* ScheduleGameCell.xib */,
+				ADD3FDA31BF2E4610058BCFD /* ScoreCell.swift */,
+				ADD3FDA41BF2E4610058BCFD /* ScoreCell.xib */,
+			);
+			name = Cells;
+			sourceTree = "<group>";
+		};
+		ADD3FD9E1BF1B8FD0058BCFD /* Detail */ = {
+			isa = PBXGroup;
+			children = (
+				ADD3FD9F1BF1B92E0058BCFD /* EventDetail.swift */,
+				ADD3FDA01BF1B92E0058BCFD /* EventDetail.xib */,
+			);
+			name = Detail;
 			sourceTree = "<group>";
 		};
 		FE781CA8377A50A959787B59 /* Pods */ = {
@@ -250,7 +516,9 @@
 		AD6102111BE2E6130009A612 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastUpgradeCheck = 0640;
+				LastSwiftMigration = 0710;
+				LastSwiftUpdateCheck = 0710;
+				LastUpgradeCheck = 0710;
 				ORGANIZATIONNAME = Wambl;
 				TargetAttributes = {
 					AD6102181BE2E6130009A612 = {
@@ -286,12 +554,30 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				AD61025C1BE3D0EB0009A612 /* EventEdit.xib in Resources */,
+				AD6254441BE7C1FC00A2F451 /* DateSelector.xib in Resources */,
+				AD6254821BEAF22000A2F451 /* TeamEdit.xib in Resources */,
 				AD61022C1BE2E6130009A612 /* LaunchScreen.xib in Resources */,
-				AD6102561BE369360009A612 /* More.xib in Resources */,
+				AD6254661BE9A04A00A2F451 /* LoginView.xib in Resources */,
+				AD6254861BEBF86600A2F451 /* UserAccessCell.xib in Resources */,
+				AD62549A1BEFEBA300A2F451 /* PlayerEdit.xib in Resources */,
+				AD6254A71BF1633400A2F451 /* ScheduleGameCell.xib in Resources */,
+				AD62545F1BE944C900A2F451 /* UserEdit.xib in Resources */,
+				AD62549E1BF0017900A2F451 /* Dailey.xib in Resources */,
+				AD62543F1BE7B68000A2F451 /* TimeSelector.xib in Resources */,
+				ADD3FDA61BF2E4610058BCFD /* ScoreCell.xib in Resources */,
+				AD62547D1BEAE36300A2F451 /* TeamsTable.xib in Resources */,
+				AD6254741BEABEEC00A2F451 /* UserAccess.xib in Resources */,
+				AD6254491BE7C83600A2F451 /* LocationSearch.xib in Resources */,
 				AD6102491BE2EBA60009A612 /* Home.xib in Resources */,
-				AD61024E1BE2EC430009A612 /* Schedule.xib in Resources */,
+				AD6254301BE77BE200A2F451 /* Main.storyboard in Resources */,
+				AD6254961BEFE57200A2F451 /* Roster.xib in Resources */,
+				AD6254561BE9443B00A2F451 /* UsersTable.xib in Resources */,
+				AD6254A31BF0100E00A2F451 /* GameEventCell.xib in Resources */,
 				AD6102291BE2E6130009A612 /* Images.xcassets in Resources */,
+				AD62548E1BEEA9E200A2F451 /* Schedule.xib in Resources */,
+				AD62548A1BEE8F4700A2F451 /* More.xib in Resources */,
+				AD6102651BE3D9B30009A612 /* Calendar.xib in Resources */,
+				ADD3FDA21BF1B92E0058BCFD /* EventDetail.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -357,14 +643,36 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				AD6254A61BF1633400A2F451 /* ScheduleGameCell.swift in Sources */,
+				AD6254431BE7C1FC00A2F451 /* DateSelector.swift in Sources */,
 				AD61021F1BE2E6130009A612 /* AppDelegate.swift in Sources */,
-				AD61025E1BE3D32A0009A612 /* EventEnum.swift in Sources */,
+				ADD3FDA11BF1B92E0058BCFD /* EventDetail.swift in Sources */,
+				AD62548D1BEEA9E200A2F451 /* Schedule.swift in Sources */,
+				AD6254551BE9443B00A2F451 /* UsersTable.swift in Sources */,
+				AD6254911BEFE45F00A2F451 /* Player.swift in Sources */,
+				AD6254A21BF0100E00A2F451 /* GameEventCell.swift in Sources */,
+				AD62549D1BF0017900A2F451 /* Dailey.swift in Sources */,
+				AD62543E1BE7B68000A2F451 /* TimeSelector.swift in Sources */,
+				AD6102641BE3D9B30009A612 /* Calendar.swift in Sources */,
 				AD6102481BE2EBA60009A612 /* Home.swift in Sources */,
-				AD61024D1BE2EC430009A612 /* Schedule.swift in Sources */,
+				AD6254851BEBF86600A2F451 /* UserAccessCell.swift in Sources */,
+				AD6254701BEAA8AB00A2F451 /* Role.swift in Sources */,
+				AD6254611BE9461100A2F451 /* User.swift in Sources */,
+				AD62547C1BEAE36300A2F451 /* TeamsTable.swift in Sources */,
 				AD6102221BE2E6130009A612 /* Athletics.xcdatamodeld in Sources */,
-				AD6102551BE369360009A612 /* More.swift in Sources */,
-				AD61025B1BE3D0EB0009A612 /* EventEdit.swift in Sources */,
+				AD62542D1BE50B0700A2F451 /* EventEdit.swift in Sources */,
+				AD6254951BEFE57200A2F451 /* Roster.swift in Sources */,
+				AD62543A1BE7A46400A2F451 /* Team.swift in Sources */,
+				AD6254651BE9A04A00A2F451 /* LoginView.swift in Sources */,
 				AD6102511BE2F45E0009A612 /* Event.swift in Sources */,
+				AD6254891BEE8F4700A2F451 /* More.swift in Sources */,
+				AD62544E1BE92ACA00A2F451 /* Globals.swift in Sources */,
+				AD6254731BEABEEC00A2F451 /* UserAccess.swift in Sources */,
+				AD6254991BEFEBA300A2F451 /* PlayerEdit.swift in Sources */,
+				AD6254811BEAF22000A2F451 /* TeamEdit.swift in Sources */,
+				AD6254481BE7C83600A2F451 /* LocationSearch.swift in Sources */,
+				ADD3FDA51BF2E4610058BCFD /* ScoreCell.swift in Sources */,
+				AD62545E1BE944C900A2F451 /* UserEdit.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -419,6 +727,7 @@
 				COPY_PHASE_STRIP = NO;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
 				GCC_DYNAMIC_NO_PIC = NO;
 				GCC_NO_COMMON_BLOCKS = YES;
@@ -484,10 +793,14 @@
 			baseConfigurationReference = 9C6A14E6F1A96AFC87044C09 /* Pods-Athletics.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				INFOPLIST_FILE = Athletics/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.wambl.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "Athletics/Athletics-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 			};
 			name = Debug;
 		};
@@ -496,10 +809,13 @@
 			baseConfigurationReference = BF8A320E446C9BCC99D6BB8F /* Pods-Athletics.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				INFOPLIST_FILE = Athletics/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.wambl.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "Athletics/Athletics-Bridging-Header.h";
 			};
 			name = Release;
 		};
@@ -507,16 +823,13 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
-				FRAMEWORK_SEARCH_PATHS = (
-					"$(SDKROOT)/Developer/Library/Frameworks",
-					"$(inherited)",
-				);
 				GCC_PREPROCESSOR_DEFINITIONS = (
 					"DEBUG=1",
 					"$(inherited)",
 				);
 				INFOPLIST_FILE = AthleticsTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.wambl.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Athletics.app/Athletics";
 			};
@@ -526,12 +839,9 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
-				FRAMEWORK_SEARCH_PATHS = (
-					"$(SDKROOT)/Developer/Library/Frameworks",
-					"$(inherited)",
-				);
 				INFOPLIST_FILE = AthleticsTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.wambl.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Athletics.app/Athletics";
 			};
