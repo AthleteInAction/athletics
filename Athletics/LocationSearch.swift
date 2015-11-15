@@ -28,21 +28,23 @@ class LocationSearch: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        title = "Select a Location"
+        
         table.delegate = self
         table.dataSource = self
         
         search.delegate = self
         
+        let cancel = UIBarButtonItem(barButtonSystemItem: .Cancel, target: self, action: Selector("cancelTPD"))
+        navigationItem.setLeftBarButtonItem(cancel, animated: true)
+        
+        navigationController?.navigationBar.translucent = false
+        
         edgesForExtendedLayout = UIRectEdge()
         
     }
 
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        
-        
-        
-    }
+    func cancelTPD(){ dismissViewControllerAnimated(true, completion: nil) }
 
 }
 
@@ -128,15 +130,7 @@ extension LocationSearch: UITableViewDataSource,UITableViewDelegate {
         
         delegate?.locationSelected(item)
         
-        if let n = navigationController {
-            
-            n.popViewControllerAnimated(true)
-            
-        } else {
-            
-            dismissViewControllerAnimated(true, completion: nil)
-            
-        }
+        dismissViewControllerAnimated(true, completion: nil)
         
     }
     

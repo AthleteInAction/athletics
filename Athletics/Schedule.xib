@@ -8,6 +8,7 @@
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="Schedule" customModule="Athletics" customModuleProvider="target">
             <connections>
                 <outlet property="ai" destination="PQH-42-nI9" id="bZi-Nl-WwM"/>
+                <outlet property="header" destination="Ph0-ar-34U" id="7nQ-EH-OkX"/>
                 <outlet property="monthTXT" destination="91s-kg-zua" id="8zl-kP-kfP"/>
                 <outlet property="nextBTN" destination="Wue-SI-UuM" id="Lar-Em-vgZ"/>
                 <outlet property="prevBTN" destination="E7J-Sp-ijN" id="FRx-9l-NAp"/>
@@ -55,7 +56,7 @@
                         </activityIndicatorView>
                     </subviews>
                     <animations/>
-                    <color key="backgroundColor" red="0.95684523809523814" green="0.95684523809523814" blue="0.95684523809523814" alpha="1" colorSpace="calibratedRGB"/>
+                    <color key="backgroundColor" red="0.95686274509803915" green="0.95686274509803915" blue="0.95686274509803915" alpha="1" colorSpace="calibratedRGB"/>
                     <constraints>
                         <constraint firstAttribute="trailing" secondItem="Wue-SI-UuM" secondAttribute="trailing" id="1Le-4h-D6r"/>
                         <constraint firstItem="91s-kg-zua" firstAttribute="leading" secondItem="E7J-Sp-ijN" secondAttribute="trailing" id="2j4-p8-xby"/>

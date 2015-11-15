@@ -25,37 +25,30 @@ class TimeSelector: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        title = "Select Time"
+        
+        navigationController?.navigationBar.translucent = false
+        
         timeSEL.date = time
         timeSEL.datePickerMode = UIDatePickerMode.Time
         
         let done = UIBarButtonItem(barButtonSystemItem: UIBarButtonSystemItem.Done, target: self, action: "doneTPD:")
-        
         navigationItem.setRightBarButtonItem(done, animated: true)
+        
+        let cancel = UIBarButtonItem(barButtonSystemItem: UIBarButtonSystemItem.Cancel, target: self, action: Selector("cancelTPD"))
+        navigationItem.setLeftBarButtonItem(cancel, animated: true)
         
         edgesForExtendedLayout = UIRectEdge()
         
     }
 
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        
-        
-        
-    }
+    func cancelTPD(){ dismissViewControllerAnimated(true, completion: nil) }
 
     @IBAction func tbdTPD(sender: AnyObject) {
         
         delegate.timeSelected(nil)
         
-        if let n = navigationController {
-            
-            n.popViewControllerAnimated(true)
-            
-        } else {
-            
-            dismissViewControllerAnimated(true, completion: nil)
-            
-        }
+        dismissViewControllerAnimated(true, completion: nil)
         
     }
     
@@ -63,15 +56,7 @@ class TimeSelector: UIViewController {
 
         delegate.timeSelected(timeSEL.date)
         
-        if let n = navigationController {
-            
-            n.popViewControllerAnimated(true)
-            
-        } else {
-            
-            dismissViewControllerAnimated(true, completion: nil)
-            
-        }
+        dismissViewControllerAnimated(true, completion: nil)
         
     }
     

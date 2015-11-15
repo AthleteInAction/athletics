@@ -42,7 +42,29 @@ class More: UITableViewController,LoginPTC,UserEditPTC {
         
         title = "More"
         
+        setData()
+        
+    }
+    
+    func setData(){
+        
         setCells()
+        
+        if let user = User.currentUser() {
+            
+//            user.getRolesLocal { (error) -> Void in
+//                
+//                self.setCells()
+//                
+//            }
+            
+            user.getRoles { (error) -> Void in
+                
+                self.setCells()
+                
+            }
+            
+        }
         
     }
     
@@ -175,6 +197,16 @@ class More: UITableViewController,LoginPTC,UserEditPTC {
             
             let vc = TeamsTable(nibName: "TeamsTable",bundle: nil)
             vc.type = "schedules"
+            
+            navigationController?.pushViewController(vc, animated: true)
+            
+        }
+        
+        // ROSTERS
+        if item.label.lowercaseString == "rosters" {
+            
+            let vc = TeamsTable(nibName: "TeamsTable",bundle: nil)
+            vc.type = "rosters"
             
             navigationController?.pushViewController(vc, animated: true)
             

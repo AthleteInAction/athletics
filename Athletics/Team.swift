@@ -38,6 +38,8 @@ class Team : PFObject,PFSubclassing {
     @NSManaged var title: String?
     @NSManaged private var sport_key: String?
     @NSManaged var users: PFRelation
+    var admins: PFRelation { return objectForKey("users") as! PFRelation }
+    var userList: [User] = []
     var sport: Sport? {
         
         get {
@@ -81,6 +83,40 @@ class Team : PFObject,PFSubclassing {
     static func parseClassName() -> String {
         
         return "Teams"
+        
+    }
+    
+}
+
+extension Team {
+    
+    func checkUser(user _user: User,completion: (admit: Bool) -> Void){
+        
+        let query = admins.query()
+        query?.whereKey("objectId", equalTo: _user.objectId!)
+        query?.findObjectsInBackgroundWithBlock({ (objects,error) -> Void in
+            
+            completion(admit: objects?.first != nil)
+            
+        })
+        
+    }
+    
+    func getUsers(completion: NSCompletion?){
+        
+        let _completion = completion
+        
+        users.query()?.findObjectsInBackgroundWithBlock { (objects,error) -> Void in
+            
+            if let objects = objects as? [User] {
+                
+                self.userList = objects
+                
+            }
+            
+            _completion?(error: error)
+            
+        }
         
     }
     

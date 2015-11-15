@@ -18,14 +18,16 @@ class UsersTable: UITableViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        navigationController?.navigationBar.translucent = false
+        
+        edgesForExtendedLayout = UIRectEdge()
+        
         title = "Users"
         
         plus = UIBarButtonItem(barButtonSystemItem: UIBarButtonSystemItem.Add, target: self, action: "plusTPD:")
 //        navigationItem.setRightBarButtonItem(plus, animated: true)
         
-        setData()
-        
-        edgesForExtendedLayout = UIRectEdge()
+        setData(true)
         
     }
 
@@ -85,27 +87,32 @@ class UsersTable: UITableViewController {
         
     }
     
-    func setData(){
+    func setData(local: Bool){
         
-        let query = PFQuery(className: "_User")
-        query.whereKey("objectId", notEqualTo: User.currentUser()!.objectId!)
-        query.findObjectsInBackgroundWithBlock { (objects, error) -> Void in
+        let query = User.query()
+        if local { query?.fromLocalDatastore() }
+        query?.whereKey("objectId", notEqualTo: User.currentUser()!.objectId!)
+        query?.findObjectsInBackgroundWithBlock { (objects, error) -> Void in
             
-            if error == nil {
+            if let objects = objects {
                 
-                if let objects = objects {
+                if local {
                     
-                    self.users = objects as! [User]
-                    self.users.sortInPlace { $0.name < $1.name }
-                    self.tableView.reloadData()
+                    self.setData(false)
+                    
+                } else {
+                    
+                    User.pinAllInBackground(objects)
                     
                 }
                 
-            } else {
-                
-                
+                self.users = objects as! [User]
+                self.users.sortInPlace { $0.name < $1.name }
+                self.tableView.reloadData()
                 
             }
+            
+            if let error = error { Alert.error(error) }
             
         }
         

@@ -21,6 +21,7 @@ class Schedule: UIViewController {
     
     var refreshControl: UIRefreshControl!
 
+    @IBOutlet weak var header: UIView!
     @IBOutlet weak var table: UITableView!
     @IBOutlet weak var monthTXT: UILabel!
     @IBOutlet weak var nextBTN: UIButton!
@@ -30,11 +31,17 @@ class Schedule: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        navigationController?.navigationBar.translucent = false
+        
+        table.registerNib(UINib(nibName: "ScheduleGameCell", bundle: nil), forCellReuseIdentifier: "game")
+        table.registerNib(UINib(nibName: "ScoreCell", bundle: nil), forCellReuseIdentifier: "score")
+        table.estimatedRowHeight = 65.0
+        table.rowHeight = UITableViewAutomaticDimension
+        
         edgesForExtendedLayout = UIRectEdge()
         
         self.refreshControl = UIRefreshControl()
-        self.refreshControl.attributedTitle = NSAttributedString(string: "Pull to refresh")
-        self.refreshControl.addTarget(self, action: Selector("setData"), forControlEvents: UIControlEvents.ValueChanged)
+        self.refreshControl.addTarget(self, action: Selector("refresh"), forControlEvents: UIControlEvents.ValueChanged)
         self.table.addSubview(refreshControl)
         
         title = "Schedule"
@@ -52,11 +59,13 @@ class Schedule: UIViewController {
         if month == nil { month = _month }
         if year == nil { year = _year }
         
-        setData()
+        setData(true)
         
     }
     
-    func setData(){
+    func refresh(){ setData(true) }
+    
+    func setData(local: Bool){
         
         if month > 12 {
             
@@ -102,6 +111,7 @@ class Schedule: UIViewController {
         let B = NSDate(dateString: "\(_year_b)-\(_month_b)-1")
         
         let query = Event.query()
+        if local { query?.fromLocalDatastore() }
         query?.whereKey("start_date", greaterThan: A)
         query?.whereKey("start_date", lessThan: B)
         if let t = team {
@@ -109,9 +119,24 @@ class Schedule: UIViewController {
             query?.whereKey("team", equalTo: t)
             
         }
+        header.alpha = 0.3
+        header.userInteractionEnabled = false
         query?.findObjectsInBackgroundWithBlock { (objects,error) -> Void in
             
+            self.header.alpha = 1
+            self.header.userInteractionEnabled = true
+            
             if let objects = objects as? [Event] {
+                
+                if local {
+                    
+                    self.setData(false)
+                    
+                } else {
+                    
+                    Event.pinAllInBackground(objects)
+                    
+                }
                 
                 self.setEvents(events: objects)
                 self.table.reloadData()
@@ -122,26 +147,30 @@ class Schedule: UIViewController {
             
         }
         
-        navigationItem.setRightBarButtonItem(nil, animated: false)
-        
         if let user = User.currentUser() {
             
-            if user.admin {
+            user.getRoles { (error) -> Void in
                 
-                let add = UIBarButtonItem(barButtonSystemItem: UIBarButtonSystemItem.Add, target: self, action: Selector("addTPD"))
-                self.navigationItem.setRightBarButtonItem(add, animated: true)
-                
-            } else {
-                
-                user.getTeams { (error) -> Void in
+                if error == nil {
                     
-                    if error == nil {
+                    if user.admin {
                         
-                        if let team = self.team {
+                        let add = UIBarButtonItem(barButtonSystemItem: .Add, target: self, action: Selector("addTPD"))
+                        self.navigationItem.setRightBarButtonItem(add, animated: true)
+                        
+                    }
+                    
+                }
+                
+                if let team = self.team {
+                    
+                    user.getTeams { (error) -> Void in
+                        
+                        if error == nil {
                             
                             if user.teams.contains(team) {
                                 
-                                let add = UIBarButtonItem(barButtonSystemItem: UIBarButtonSystemItem.Add, target: self, action: Selector("addTPD"))
+                                let add = UIBarButtonItem(barButtonSystemItem: .Add, target: self, action: Selector("addTPD"))
                                 self.navigationItem.setRightBarButtonItem(add, animated: true)
                                 
                             }
@@ -161,6 +190,7 @@ class Schedule: UIViewController {
     func addTPD(){
         
         let vc = MS.instantiateViewControllerWithIdentifier("event_edit") as! EventEdit
+        vc.team = team
         
         let nav = UINavigationController(rootViewController: vc)
         
@@ -233,7 +263,7 @@ class Schedule: UIViewController {
             
         }
         
-        setData()
+        setData(true)
         
     }
     
@@ -243,47 +273,105 @@ extension Schedule: UITableViewDelegate,UITableViewDataSource {
     
     func numberOfSectionsInTableView(tableView: UITableView) -> Int {
         
-        return sections.count
+        if events.count == 0 {
+            
+            return 1
+            
+        } else {
+            
+            return sections.count
+            
+        }
         
     }
     
     func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         
-        let section = sections[section]
         
-        let item = schedule[section.key]!
-        
-        return item.count
+        if events.count == 0 {
+            
+            return 1
+            
+        } else {
+            
+            let section = sections[section]
+            
+            let item = schedule[section.key]!
+            
+            return item.count
+            
+        }
         
     }
     
     func tableView(tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
         
-        let section = sections[section]
-        
-        let view = UIView(frame: CGRect(x: 0, y: 0, width: tableView.frame.width, height: 30))
-        view.backgroundColor = UIColor(red: 234/255, green: 234/255, blue: 234/255, alpha: 1)
-        
-        let label = UILabel(frame: CGRect(x: 16, y: view.frame.origin.y, width: view.frame.width, height: view.frame.height))
-        label.text = section.key
-        label.textColor = UIColor(red: 51/255, green: 51/255, blue: 51/255, alpha: 1)
-        label.font = UIFont.systemFontOfSize(13)
-        
-        view.addSubview(label)
-        
-        return view
+        if events.count == 0 {
+            
+            return nil
+            
+        } else {
+            
+            let view = UIView(frame: CGRect(x: 0, y: 0, width: tableView.frame.width, height: 30))
+            view.backgroundColor = UIColor(red: 245/255, green: 245/255, blue: 245/255, alpha: 1)
+            
+            let label = UILabel(frame: CGRect(x: 8, y: view.frame.origin.y, width: view.frame.width, height: view.frame.height))
+            label.textColor = UIColor(red: 100/255, green: 100/255, blue: 100/255, alpha: 1)
+            label.font = UIFont.systemFontOfSize(13)
+            
+            label.text = sections[section].key
+            
+            view.addSubview(label)
+            
+            return view
+            
+        }
         
     }
     
     func tableView(tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
         
-        return 30
+        if events.count == 0 {
+            
+            return 0
+            
+        } else {
+            
+            return 30
+            
+        }
         
     }
     
     func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
         
-        let cell = UITableViewCell(style: .Default, reuseIdentifier: "_")
+        if events.count == 0 {
+            
+            return CellObject.empty()
+            
+        } else {
+            
+            let section = sections[indexPath.section]
+            
+            let key = section.key
+            
+            let event = schedule[key]![indexPath.row]
+            
+            if let _ = event.score {
+                
+                return CellObject.score(tableView: tableView, event: event)
+                
+            } else {
+                
+                return CellObject.schedule(tableView: tableView, event: event)
+                
+            }
+            
+        }
+        
+    }
+    
+    func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
         
         let section = sections[indexPath.section]
         
@@ -291,27 +379,10 @@ extension Schedule: UITableViewDelegate,UITableViewDataSource {
         
         let event = schedule[key]![indexPath.row]
         
-        cell.textLabel?.text = event.title
+        let vc = EventDetail(nibName: "EventDetail",bundle: nil)
+        vc.event = event
         
-        var select = false
-        
-        if let user  = User.currentUser() {
-            
-            if user.admin {
-                
-                select = true
-                
-            }
-            
-        }
-        
-        if !select { cell.selectionStyle = .None }
-        
-        return cell
-        
-    }
-    
-    func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
+        navigationController?.pushViewController(vc, animated: true)
         
         tableView.deselectRowAtIndexPath(indexPath, animated: true)
         

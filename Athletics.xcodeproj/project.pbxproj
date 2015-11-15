@@ -47,6 +47,21 @@
 		AD62548A1BEE8F4700A2F451 /* More.xib in Resources */ = {isa = PBXBuildFile; fileRef = AD6254881BEE8F4700A2F451 /* More.xib */; };
 		AD62548D1BEEA9E200A2F451 /* Schedule.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD62548B1BEEA9E200A2F451 /* Schedule.swift */; };
 		AD62548E1BEEA9E200A2F451 /* Schedule.xib in Resources */ = {isa = PBXBuildFile; fileRef = AD62548C1BEEA9E200A2F451 /* Schedule.xib */; };
+		AD6254911BEFE45F00A2F451 /* Player.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD6254901BEFE45F00A2F451 /* Player.swift */; };
+		AD6254951BEFE57200A2F451 /* Roster.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD6254931BEFE57200A2F451 /* Roster.swift */; };
+		AD6254961BEFE57200A2F451 /* Roster.xib in Resources */ = {isa = PBXBuildFile; fileRef = AD6254941BEFE57200A2F451 /* Roster.xib */; };
+		AD6254991BEFEBA300A2F451 /* PlayerEdit.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD6254971BEFEBA300A2F451 /* PlayerEdit.swift */; };
+		AD62549A1BEFEBA300A2F451 /* PlayerEdit.xib in Resources */ = {isa = PBXBuildFile; fileRef = AD6254981BEFEBA300A2F451 /* PlayerEdit.xib */; };
+		AD62549D1BF0017900A2F451 /* Dailey.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD62549B1BF0017900A2F451 /* Dailey.swift */; };
+		AD62549E1BF0017900A2F451 /* Dailey.xib in Resources */ = {isa = PBXBuildFile; fileRef = AD62549C1BF0017900A2F451 /* Dailey.xib */; };
+		AD6254A21BF0100E00A2F451 /* GameEventCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD6254A01BF0100E00A2F451 /* GameEventCell.swift */; };
+		AD6254A31BF0100E00A2F451 /* GameEventCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = AD6254A11BF0100E00A2F451 /* GameEventCell.xib */; };
+		AD6254A61BF1633400A2F451 /* ScheduleGameCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD6254A41BF1633400A2F451 /* ScheduleGameCell.swift */; };
+		AD6254A71BF1633400A2F451 /* ScheduleGameCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = AD6254A51BF1633400A2F451 /* ScheduleGameCell.xib */; };
+		ADD3FDA11BF1B92E0058BCFD /* EventDetail.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADD3FD9F1BF1B92E0058BCFD /* EventDetail.swift */; };
+		ADD3FDA21BF1B92E0058BCFD /* EventDetail.xib in Resources */ = {isa = PBXBuildFile; fileRef = ADD3FDA01BF1B92E0058BCFD /* EventDetail.xib */; };
+		ADD3FDA51BF2E4610058BCFD /* ScoreCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADD3FDA31BF2E4610058BCFD /* ScoreCell.swift */; };
+		ADD3FDA61BF2E4610058BCFD /* ScoreCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = ADD3FDA41BF2E4610058BCFD /* ScoreCell.xib */; };
 		E0D926ABB0E9AB0D01A78AA6 /* Pods_Athletics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 532598E9C0E224A2EA27CC0C /* Pods_Athletics.framework */; };
 /* End PBXBuildFile section */
 
@@ -108,6 +123,21 @@
 		AD6254881BEE8F4700A2F451 /* More.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = More.xib; sourceTree = "<group>"; };
 		AD62548B1BEEA9E200A2F451 /* Schedule.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Schedule.swift; sourceTree = "<group>"; };
 		AD62548C1BEEA9E200A2F451 /* Schedule.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = Schedule.xib; sourceTree = "<group>"; };
+		AD6254901BEFE45F00A2F451 /* Player.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Player.swift; sourceTree = "<group>"; };
+		AD6254931BEFE57200A2F451 /* Roster.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Roster.swift; sourceTree = "<group>"; };
+		AD6254941BEFE57200A2F451 /* Roster.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = Roster.xib; sourceTree = "<group>"; };
+		AD6254971BEFEBA300A2F451 /* PlayerEdit.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PlayerEdit.swift; sourceTree = "<group>"; };
+		AD6254981BEFEBA300A2F451 /* PlayerEdit.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = PlayerEdit.xib; sourceTree = "<group>"; };
+		AD62549B1BF0017900A2F451 /* Dailey.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Dailey.swift; sourceTree = "<group>"; };
+		AD62549C1BF0017900A2F451 /* Dailey.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = Dailey.xib; sourceTree = "<group>"; };
+		AD6254A01BF0100E00A2F451 /* GameEventCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GameEventCell.swift; sourceTree = "<group>"; };
+		AD6254A11BF0100E00A2F451 /* GameEventCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = GameEventCell.xib; sourceTree = "<group>"; };
+		AD6254A41BF1633400A2F451 /* ScheduleGameCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ScheduleGameCell.swift; sourceTree = "<group>"; };
+		AD6254A51BF1633400A2F451 /* ScheduleGameCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ScheduleGameCell.xib; sourceTree = "<group>"; };
+		ADD3FD9F1BF1B92E0058BCFD /* EventDetail.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EventDetail.swift; sourceTree = "<group>"; };
+		ADD3FDA01BF1B92E0058BCFD /* EventDetail.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = EventDetail.xib; sourceTree = "<group>"; };
+		ADD3FDA31BF2E4610058BCFD /* ScoreCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ScoreCell.swift; sourceTree = "<group>"; };
+		ADD3FDA41BF2E4610058BCFD /* ScoreCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ScoreCell.xib; sourceTree = "<group>"; };
 		BF8A320E446C9BCC99D6BB8F /* Pods-Athletics.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Athletics.release.xcconfig"; path = "Pods/Target Support Files/Pods-Athletics/Pods-Athletics.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -215,8 +245,11 @@
 		AD61024A1BE2EC0A0009A612 /* Schedule */ = {
 			isa = PBXGroup;
 			children = (
+				AD62549F1BF00FEF00A2F451 /* Cells */,
 				AD62548B1BEEA9E200A2F451 /* Schedule.swift */,
 				AD62548C1BEEA9E200A2F451 /* Schedule.xib */,
+				AD62549B1BF0017900A2F451 /* Dailey.swift */,
+				AD62549C1BF0017900A2F451 /* Dailey.xib */,
 			);
 			name = Schedule;
 			sourceTree = "<group>";
@@ -224,6 +257,7 @@
 		AD61024F1BE2F4430009A612 /* DB */ = {
 			isa = PBXGroup;
 			children = (
+				AD62548F1BEFE44700A2F451 /* Player */,
 				AD62546E1BEAA89E00A2F451 /* Roles */,
 				AD62545B1BE944B000A2F451 /* User */,
 				AD6254381BE7A45A00A2F451 /* Team */,
@@ -245,6 +279,7 @@
 			isa = PBXGroup;
 			children = (
 				AD6102501BE2F45E0009A612 /* Event.swift */,
+				ADD3FD9E1BF1B8FD0058BCFD /* Detail */,
 				AD62542B1BE50B0700A2F451 /* EventEdit.swift */,
 			);
 			name = Event;
@@ -383,6 +418,48 @@
 			name = TeamEdit;
 			sourceTree = "<group>";
 		};
+		AD62548F1BEFE44700A2F451 /* Player */ = {
+			isa = PBXGroup;
+			children = (
+				AD6254901BEFE45F00A2F451 /* Player.swift */,
+				AD6254921BEFE55200A2F451 /* Roster */,
+				AD6254971BEFEBA300A2F451 /* PlayerEdit.swift */,
+				AD6254981BEFEBA300A2F451 /* PlayerEdit.xib */,
+			);
+			name = Player;
+			sourceTree = "<group>";
+		};
+		AD6254921BEFE55200A2F451 /* Roster */ = {
+			isa = PBXGroup;
+			children = (
+				AD6254931BEFE57200A2F451 /* Roster.swift */,
+				AD6254941BEFE57200A2F451 /* Roster.xib */,
+			);
+			name = Roster;
+			sourceTree = "<group>";
+		};
+		AD62549F1BF00FEF00A2F451 /* Cells */ = {
+			isa = PBXGroup;
+			children = (
+				AD6254A01BF0100E00A2F451 /* GameEventCell.swift */,
+				AD6254A11BF0100E00A2F451 /* GameEventCell.xib */,
+				AD6254A41BF1633400A2F451 /* ScheduleGameCell.swift */,
+				AD6254A51BF1633400A2F451 /* ScheduleGameCell.xib */,
+				ADD3FDA31BF2E4610058BCFD /* ScoreCell.swift */,
+				ADD3FDA41BF2E4610058BCFD /* ScoreCell.xib */,
+			);
+			name = Cells;
+			sourceTree = "<group>";
+		};
+		ADD3FD9E1BF1B8FD0058BCFD /* Detail */ = {
+			isa = PBXGroup;
+			children = (
+				ADD3FD9F1BF1B92E0058BCFD /* EventDetail.swift */,
+				ADD3FDA01BF1B92E0058BCFD /* EventDetail.xib */,
+			);
+			name = Detail;
+			sourceTree = "<group>";
+		};
 		FE781CA8377A50A959787B59 /* Pods */ = {
 			isa = PBXGroup;
 			children = (
@@ -482,18 +559,25 @@
 				AD61022C1BE2E6130009A612 /* LaunchScreen.xib in Resources */,
 				AD6254661BE9A04A00A2F451 /* LoginView.xib in Resources */,
 				AD6254861BEBF86600A2F451 /* UserAccessCell.xib in Resources */,
+				AD62549A1BEFEBA300A2F451 /* PlayerEdit.xib in Resources */,
+				AD6254A71BF1633400A2F451 /* ScheduleGameCell.xib in Resources */,
 				AD62545F1BE944C900A2F451 /* UserEdit.xib in Resources */,
+				AD62549E1BF0017900A2F451 /* Dailey.xib in Resources */,
 				AD62543F1BE7B68000A2F451 /* TimeSelector.xib in Resources */,
+				ADD3FDA61BF2E4610058BCFD /* ScoreCell.xib in Resources */,
 				AD62547D1BEAE36300A2F451 /* TeamsTable.xib in Resources */,
 				AD6254741BEABEEC00A2F451 /* UserAccess.xib in Resources */,
 				AD6254491BE7C83600A2F451 /* LocationSearch.xib in Resources */,
 				AD6102491BE2EBA60009A612 /* Home.xib in Resources */,
 				AD6254301BE77BE200A2F451 /* Main.storyboard in Resources */,
+				AD6254961BEFE57200A2F451 /* Roster.xib in Resources */,
 				AD6254561BE9443B00A2F451 /* UsersTable.xib in Resources */,
+				AD6254A31BF0100E00A2F451 /* GameEventCell.xib in Resources */,
 				AD6102291BE2E6130009A612 /* Images.xcassets in Resources */,
 				AD62548E1BEEA9E200A2F451 /* Schedule.xib in Resources */,
 				AD62548A1BEE8F4700A2F451 /* More.xib in Resources */,
 				AD6102651BE3D9B30009A612 /* Calendar.xib in Resources */,
+				ADD3FDA21BF1B92E0058BCFD /* EventDetail.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -559,10 +643,15 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				AD6254A61BF1633400A2F451 /* ScheduleGameCell.swift in Sources */,
 				AD6254431BE7C1FC00A2F451 /* DateSelector.swift in Sources */,
 				AD61021F1BE2E6130009A612 /* AppDelegate.swift in Sources */,
+				ADD3FDA11BF1B92E0058BCFD /* EventDetail.swift in Sources */,
 				AD62548D1BEEA9E200A2F451 /* Schedule.swift in Sources */,
 				AD6254551BE9443B00A2F451 /* UsersTable.swift in Sources */,
+				AD6254911BEFE45F00A2F451 /* Player.swift in Sources */,
+				AD6254A21BF0100E00A2F451 /* GameEventCell.swift in Sources */,
+				AD62549D1BF0017900A2F451 /* Dailey.swift in Sources */,
 				AD62543E1BE7B68000A2F451 /* TimeSelector.swift in Sources */,
 				AD6102641BE3D9B30009A612 /* Calendar.swift in Sources */,
 				AD6102481BE2EBA60009A612 /* Home.swift in Sources */,
@@ -572,14 +661,17 @@
 				AD62547C1BEAE36300A2F451 /* TeamsTable.swift in Sources */,
 				AD6102221BE2E6130009A612 /* Athletics.xcdatamodeld in Sources */,
 				AD62542D1BE50B0700A2F451 /* EventEdit.swift in Sources */,
+				AD6254951BEFE57200A2F451 /* Roster.swift in Sources */,
 				AD62543A1BE7A46400A2F451 /* Team.swift in Sources */,
 				AD6254651BE9A04A00A2F451 /* LoginView.swift in Sources */,
 				AD6102511BE2F45E0009A612 /* Event.swift in Sources */,
 				AD6254891BEE8F4700A2F451 /* More.swift in Sources */,
 				AD62544E1BE92ACA00A2F451 /* Globals.swift in Sources */,
 				AD6254731BEABEEC00A2F451 /* UserAccess.swift in Sources */,
+				AD6254991BEFEBA300A2F451 /* PlayerEdit.swift in Sources */,
 				AD6254811BEAF22000A2F451 /* TeamEdit.swift in Sources */,
 				AD6254481BE7C83600A2F451 /* LocationSearch.swift in Sources */,
+				ADD3FDA51BF2E4610058BCFD /* ScoreCell.swift in Sources */,
 				AD62545E1BE944C900A2F451 /* UserEdit.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

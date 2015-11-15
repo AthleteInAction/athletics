@@ -12,6 +12,7 @@ import Parse
 
 var MS: UIStoryboard!
 var ADMIN: Role?
+var home: Home?
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
@@ -26,6 +27,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         
         Parse.enableLocalDatastore()
         
+        Player.registerSubclass()
         Role.registerSubclass()
         User.registerSubclass()
         Team.registerSubclass()
@@ -36,7 +38,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         
         window = UIWindow(frame: UIScreen.mainScreen().bounds)
         
-        let home = Home(nibName: "Home", bundle: nil)
+        home = Home(nibName: "Home", bundle: nil)
         
         window?.rootViewController = home
         window?.makeKeyAndVisible()
@@ -63,7 +65,20 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         
         // Restart any tasks that were paused (or not yet started) while the application was inactive. If the application was previously in the background, optionally refresh the user interface.
         
-        if let user = User.currentUser() { user.getRoles(nil) }
+        if let home = home {
+            
+            if let schedule = home.schedule {
+                
+                if schedule.loaded {
+                    
+                    schedule.date = NSDate()
+                    schedule.setDisplay()
+                    
+                }
+                
+            }
+            
+        }
         
     }
 

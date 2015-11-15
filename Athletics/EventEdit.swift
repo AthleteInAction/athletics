@@ -22,6 +22,7 @@ class EventEdit: UITableViewController {
     var delegate: EventEditPTC?
     
     var event: Event?
+    var team: Team?
     var new_event = true
     
     var keys: [Event.Key] = [.GameLeague,.GameNonLeague,.GamePreseason,.Scrimmage]
@@ -30,6 +31,8 @@ class EventEdit: UITableViewController {
     
     let f = NSDateFormatter()
     let z = NSDateFormatter()
+    
+    var save: UIBarButtonItem!
     
     @IBOutlet weak var keyTXT: UILabel!
     @IBOutlet weak var keyDISPLAY: UITableViewCell!
@@ -44,11 +47,17 @@ class EventEdit: UITableViewController {
     @IBOutlet weak var startTimeTXT: UILabel!
     @IBOutlet weak var locCELL: UITableViewCell!
     @IBOutlet weak var locTXT: UILabel!
+    @IBOutlet weak var haSEL: UISegmentedControl!
+    
+    var has = [Event.HA.Away,Event.HA.Neutral,Event.HA.Home]
     
     var tap: UITapGestureRecognizer!
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        edgesForExtendedLayout = UIRectEdge()
+        navigationController?.navigationBar.translucent = false
         
         if let _ = event {
             title = "Event Edit"
@@ -61,19 +70,19 @@ class EventEdit: UITableViewController {
         f.dateFormat = "E, MMM d, YYYY"
         z.dateFormat = "h:mm a"
         
-        setData()
-        
         tap = UITapGestureRecognizer()
         tap.addTarget(self, action: Selector("dismissKeyboard"))
         
         opponentLBL.alpha = 0.3
         opponentDISPLAY.userInteractionEnabled = false
         
-        let save = UIBarButtonItem(barButtonSystemItem: UIBarButtonSystemItem.Save, target: self, action: "saveTPD:")
+        save = UIBarButtonItem(barButtonSystemItem: UIBarButtonSystemItem.Save, target: self, action: "saveTPD:")
         navigationItem.setRightBarButtonItem(save, animated: true)
         
         let cancel = UIBarButtonItem(barButtonSystemItem: UIBarButtonSystemItem.Cancel, target: self, action: Selector("cancelTPD"))
         navigationItem.setLeftBarButtonItem(cancel, animated: true)
+        
+        setData()
         
     }
 
@@ -90,7 +99,7 @@ class EventEdit: UITableViewController {
         keyTXT.text = ""
         locTXT.text = ""
         startDateTXT.text = ""
-        startTimeTXT.text = ""
+        startTimeTXT.text = "TBD"
         
         if let e = event {
             
@@ -104,13 +113,23 @@ class EventEdit: UITableViewController {
             
             if let start_date = e.start_date { startDateTXT.text = f.stringFromDate(start_date) }
             
-            if let t = e.start_time { startTimeTXT.text = z.stringFromDate(t) }
+            if let t = e.start_time { startTimeTXT.text = z.stringFromDate(t) } else { startTimeCELL.textLabel?.text = "TBD" }
+            
+            if let ha = e.home { haSEL.selectedSegmentIndex = ha.int }
             
         } else {
             
             event = Event()
+            if let team = team {
+                
+                event!.team = team
+                teamTXT.text = event!.team!.title
+            
+            }
             
         }
+        
+        setSave()
         
     }
     
@@ -158,7 +177,9 @@ class EventEdit: UITableViewController {
             let vc = LocationSearch(nibName: "LocationSearch",bundle: nil)
             vc.delegate = self
             
-            navigationController?.pushViewController(vc, animated: true)
+            let nav = UINavigationController(rootViewController: vc)
+            
+            presentViewController(nav, animated: true, completion: nil)
             
         case startDateCELL:
             
@@ -166,23 +187,31 @@ class EventEdit: UITableViewController {
             vc.delegate = self
             vc.date = event!.start_date
             
-            navigationController?.pushViewController(vc, animated: true)
+            let nav = UINavigationController(rootViewController: vc)
+            
+            presentViewController(nav, animated: true, completion: nil)
             
         case startTimeCELL:
             
-            let vc = TimeSelector(nibName: "TimeSelector",bundle: nil)
-            vc.delegate = self
-            if let t = event!.start_time {
+            if let _ = event!.start_date {
                 
-                vc.time = t
+                let vc = TimeSelector(nibName: "TimeSelector",bundle: nil)
+                vc.delegate = self
+                if let t = event!.start_time {
+                    
+                    vc.time = t
+                    
+                } else {
+                    
+                    vc.time = event!.start_date
+                    
+                }
                 
-            } else {
-                
-                vc.time = event!.start_date
+                let nav = UINavigationController(rootViewController: vc)
+
+                presentViewController(nav, animated: true, completion: nil)
                 
             }
-            
-            navigationController?.pushViewController(vc, animated: true)
             
         case keyDISPLAY:
             
@@ -219,6 +248,8 @@ class EventEdit: UITableViewController {
                     
                     self.event?.key = key
                     
+                    self.setSave()
+                    
                 })
                 
                 alert.addAction(action)
@@ -239,9 +270,11 @@ class EventEdit: UITableViewController {
             
             let vc = TeamsTable(nibName: "TeamsTable",bundle: nil)
             vc.delegate = self
-            vc.shouldClose = true
+            vc.type = "event_edit"
             
-            navigationController?.pushViewController(vc, animated: true)
+            let nav = UINavigationController(rootViewController: vc)
+            
+            presentViewController(nav, animated: true, completion: nil)
             
         default:()
         }
@@ -256,7 +289,7 @@ class EventEdit: UITableViewController {
         
     }
     
-    func saveTPD(sender: UIBarButtonItem){
+    func setSave(){
         
         var clean = true
         
@@ -289,8 +322,20 @@ class EventEdit: UITableViewController {
         
         if e.start_date == nil { clean = false }
         
-        if clean {
-            
+        if e.location == nil { clean = false }
+        
+        save.enabled = clean
+        
+    }
+    
+    func saveTPD(sender: UIBarButtonItem){
+        
+        let e = event!
+        
+        e.home = has[haSEL.selectedSegmentIndex]
+        
+//        if clean {
+        
             e.saveInBackgroundWithBlock { (success, error) -> Void in
                 
                 if success {
@@ -313,7 +358,7 @@ class EventEdit: UITableViewController {
                 
             }
             
-        }
+//        }
         
     }
     
@@ -326,6 +371,8 @@ extension EventEdit: TimeSelPTC,DateSelPTC,LocationSearchPTC,TeamsTablePTC {
         event?.team = team
         
         if let t = team { teamTXT.text = t.title }
+        
+        setSave()
         
     }
     
@@ -343,6 +390,8 @@ extension EventEdit: TimeSelPTC,DateSelPTC,LocationSearchPTC,TeamsTablePTC {
             
         }
         
+        setSave()
+        
     }
     
     func dateSelected(date: NSDate) {
@@ -350,6 +399,8 @@ extension EventEdit: TimeSelPTC,DateSelPTC,LocationSearchPTC,TeamsTablePTC {
         event?.start_date = date
         
         startDateTXT.text = f.stringFromDate(date)
+        
+        setSave()
         
     }
     
@@ -360,6 +411,8 @@ extension EventEdit: TimeSelPTC,DateSelPTC,LocationSearchPTC,TeamsTablePTC {
         if let d = item.placemark.addressDictionary { event?.loc_address = ABCreateStringWithAddressDictionary(d, false) }
             
         locTXT.text = item.name
+        
+        setSave()
         
     }
     

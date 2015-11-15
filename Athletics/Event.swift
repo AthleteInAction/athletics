@@ -38,6 +38,33 @@ class Event : PFObject,PFSubclassing {
         
     }
     
+    enum HA: String {
+        
+        case Home = "home"
+        case Away = "away"
+        case Neutral = "neutral"
+        
+        var display: String {
+            
+            switch self {
+            case .Away: return "@"
+            default: return "vs"
+            }
+            
+        }
+        
+        var int: Int {
+            
+            switch self {
+            case .Away: return 0
+            case .Neutral: return 1
+            default: return 2
+            }
+            
+        }
+        
+    }
+    
     @NSManaged var team: Team?
     @NSManaged private var keyRaw: String?
     var key: Key? {
@@ -63,6 +90,27 @@ class Event : PFObject,PFSubclassing {
     @NSManaged var start_time: NSDate?
     @NSManaged var title: String?
     @NSManaged private var locationRaw: PFGeoPoint?
+    @NSManaged var score: [Int]?
+    @NSManaged private var homeRaw: String?
+    var home: HA? {
+        
+        get {
+            
+            if let h = homeRaw {
+                
+                return HA(rawValue: h)
+                
+            } else {
+                
+                return nil
+                
+            }
+            
+        }
+        
+        set { homeRaw = newValue?.rawValue }
+        
+    }
     var location: CLLocation? {
         
         get {

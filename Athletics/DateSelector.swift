@@ -29,8 +29,10 @@ class DateSelector: UIViewController {
         dateSEL.datePickerMode = UIDatePickerMode.Date
         
         let done = UIBarButtonItem(barButtonSystemItem: .Done, target: self, action: "doneTPD:")
-        
         navigationItem.setRightBarButtonItem(done, animated: true)
+        
+        let cancel = UIBarButtonItem(barButtonSystemItem: UIBarButtonSystemItem.Cancel, target: self, action: Selector("cancelTPD"))
+        navigationItem.setLeftBarButtonItem(cancel, animated: true)
         
         if date == nil { date = NSDate() }
         
@@ -38,26 +40,13 @@ class DateSelector: UIViewController {
         
     }
 
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        
-        
-        
-    }
+    func cancelTPD(){ dismissViewControllerAnimated(true, completion: nil) }
     
     func doneTPD(sender: AnyObject){
         
         delegate.dateSelected(dateSEL.date)
         
-        if let n = navigationController {
-            
-            n.popViewControllerAnimated(true)
-            
-        } else {
-            
-            dismissViewControllerAnimated(true, completion: nil)
-            
-        }
+        dismissViewControllerAnimated(true, completion: nil)
         
     }
 

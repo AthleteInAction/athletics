@@ -1,0 +1,120 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="9059" systemVersion="15B42" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9049"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="EventDetail" customModule="Athletics" customModuleProvider="target">
+            <connections>
+                <outlet property="directionsBTN" destination="AYv-Yd-mNz" id="ALi-Pl-Dji"/>
+                <outlet property="locationTXT" destination="YoD-vA-lfR" id="gTz-d3-HVk"/>
+                <outlet property="map" destination="5ux-mF-67g" id="sf3-Io-tCr"/>
+                <outlet property="subtitleTXT" destination="Be3-Yw-8YG" id="ZDY-5p-Rqg"/>
+                <outlet property="timeTXT" destination="PZT-4r-nEK" id="jx6-Lx-vFQ"/>
+                <outlet property="titleTXT" destination="M04-CB-leD" id="uB7-8l-PAb"/>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Basketball Boys Varsity" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="M04-CB-leD">
+                    <rect key="frame" x="8" y="8" width="219" height="24"/>
+                    <animations/>
+                    <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="20"/>
+                    <color key="textColor" red="0.20000000000000001" green="0.20000000000000001" blue="0.20000000000000001" alpha="1" colorSpace="calibratedRGB"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="@ Leland High School" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Be3-Yw-8YG">
+                    <rect key="frame" x="8" y="32" width="150" height="18"/>
+                    <animations/>
+                    <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                    <color key="textColor" red="0.4161044974" green="0.4161044974" blue="0.4161044974" alpha="1" colorSpace="calibratedRGB"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Time:" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Qhm-Ez-Lbg">
+                    <rect key="frame" x="8" y="58" width="39" height="18"/>
+                    <animations/>
+                    <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                    <color key="textColor" red="0.20000000000000001" green="0.20000000000000001" blue="0.20000000000000001" alpha="1" colorSpace="calibratedRGB"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="7:00 PM" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="PZT-4r-nEK">
+                    <rect key="frame" x="79" y="58" width="57" height="18"/>
+                    <animations/>
+                    <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                    <color key="textColor" red="0.4161044974" green="0.4161044974" blue="0.4161044974" alpha="1" colorSpace="calibratedRGB"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="5ux-mF-67g">
+                    <rect key="frame" x="8" y="128" width="359" height="531"/>
+                    <animations/>
+                </mapView>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Location:" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dlR-3m-nZg">
+                    <rect key="frame" x="8" y="84" width="63" height="18"/>
+                    <animations/>
+                    <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                    <color key="textColor" red="0.20000000000000001" green="0.20000000000000001" blue="0.20000000000000001" alpha="1" colorSpace="calibratedRGB"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Leland High School" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="YoD-vA-lfR">
+                    <rect key="frame" x="79" y="84" width="133" height="18"/>
+                    <animations/>
+                    <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                    <color key="textColor" red="0.4161044974" green="0.4161044974" blue="0.4161044974" alpha="1" colorSpace="calibratedRGB"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="AYv-Yd-mNz">
+                    <rect key="frame" x="79" y="102" width="215" height="18"/>
+                    <animations/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="18" id="25i-V3-8yn"/>
+                    </constraints>
+                    <state key="normal" title="2264 Cherry Ave, San Jose, CA"/>
+                    <connections>
+                        <action selector="openMap:" destination="-1" eventType="touchUpInside" id="4Ci-BC-1eq"/>
+                    </connections>
+                </button>
+            </subviews>
+            <animations/>
+            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+            <constraints>
+                <constraint firstItem="AYv-Yd-mNz" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" constant="8" id="399-ht-BW6"/>
+                <constraint firstItem="5ux-mF-67g" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" constant="8" id="4IR-YQ-SmO"/>
+                <constraint firstItem="5ux-mF-67g" firstAttribute="top" secondItem="AYv-Yd-mNz" secondAttribute="bottom" constant="8" id="5CO-B3-VkX"/>
+                <constraint firstItem="Be3-Yw-8YG" firstAttribute="top" secondItem="M04-CB-leD" secondAttribute="bottom" id="7N5-3A-Zkn"/>
+                <constraint firstItem="5ux-mF-67g" firstAttribute="top" secondItem="AYv-Yd-mNz" secondAttribute="bottom" constant="8" id="BiL-7w-PCI"/>
+                <constraint firstAttribute="trailing" secondItem="5ux-mF-67g" secondAttribute="trailing" constant="8" id="DUd-bG-U7D"/>
+                <constraint firstItem="AYv-Yd-mNz" firstAttribute="top" secondItem="PZT-4r-nEK" secondAttribute="bottom" constant="8" id="Ffe-s7-g93"/>
+                <constraint firstAttribute="bottom" secondItem="5ux-mF-67g" secondAttribute="bottom" constant="8" id="HER-2q-0Kz"/>
+                <constraint firstItem="PZT-4r-nEK" firstAttribute="leading" secondItem="Qhm-Ez-Lbg" secondAttribute="trailing" constant="8" id="Kgz-4O-i1Q"/>
+                <constraint firstItem="Qhm-Ez-Lbg" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" constant="8" id="L05-dn-jvF"/>
+                <constraint firstItem="YoD-vA-lfR" firstAttribute="leading" secondItem="dlR-3m-nZg" secondAttribute="trailing" constant="8" id="Lpr-xT-UUS"/>
+                <constraint firstItem="PZT-4r-nEK" firstAttribute="leading" secondItem="YoD-vA-lfR" secondAttribute="leading" id="MKO-Rl-ENH"/>
+                <constraint firstItem="M04-CB-leD" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" constant="8" id="OYo-tT-i2p"/>
+                <constraint firstItem="M04-CB-leD" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" constant="8" id="QJg-vc-POC"/>
+                <constraint firstItem="Be3-Yw-8YG" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" constant="8" id="cpY-xc-lra"/>
+                <constraint firstItem="Qhm-Ez-Lbg" firstAttribute="top" secondItem="Be3-Yw-8YG" secondAttribute="bottom" constant="8" id="dWD-0r-49H"/>
+                <constraint firstItem="dlR-3m-nZg" firstAttribute="top" secondItem="Qhm-Ez-Lbg" secondAttribute="bottom" constant="8" id="gm0-iY-l7i"/>
+                <constraint firstItem="dlR-3m-nZg" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" constant="8" id="iuU-Xj-Szq"/>
+                <constraint firstItem="AYv-Yd-mNz" firstAttribute="leading" secondItem="YoD-vA-lfR" secondAttribute="leading" id="jDJ-WG-73m"/>
+                <constraint firstItem="AYv-Yd-mNz" firstAttribute="top" secondItem="YoD-vA-lfR" secondAttribute="bottom" id="jJc-LN-ari"/>
+                <constraint firstItem="YoD-vA-lfR" firstAttribute="centerY" secondItem="dlR-3m-nZg" secondAttribute="centerY" id="jus-EW-FWe"/>
+                <constraint firstItem="PZT-4r-nEK" firstAttribute="centerY" secondItem="Qhm-Ez-Lbg" secondAttribute="centerY" id="mgA-pb-yqF"/>
+            </constraints>
+            <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
+            <variation key="default">
+                <mask key="constraints">
+                    <exclude reference="Kgz-4O-i1Q"/>
+                    <exclude reference="399-ht-BW6"/>
+                    <exclude reference="Ffe-s7-g93"/>
+                    <exclude reference="5CO-B3-VkX"/>
+                </mask>
+            </variation>
+            <point key="canvasLocation" x="374.5" y="675.5"/>
+        </view>
+    </objects>
+</document>

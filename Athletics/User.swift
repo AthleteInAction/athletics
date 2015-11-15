@@ -41,6 +41,35 @@ class User: PFUser {
             
             if let objects = objects as? [Role] {
                 
+                Role.pinAllInBackground(objects)
+                
+                self.admin = false
+                
+                for role in objects {
+                    
+                    if role.name == "admin" { self.admin = true }
+                    
+                }
+                
+            }
+            
+            _completion?(error: error)
+            
+        }
+        
+    }
+    
+    func getRolesLocal(completion: NSCompletion?){
+        
+        let _completion = completion
+        
+        let query = Role.query()
+        query?.fromLocalDatastore()
+        query?.whereKey("users", equalTo: self)
+        query?.findObjectsInBackgroundWithBlock { (objects,error) -> Void in
+            
+            if let objects = objects as? [Role] {
+                
                 self.admin = false
                 
                 for role in objects {
@@ -62,6 +91,29 @@ class User: PFUser {
         let _completion = completion
         
         let query = Team.query()
+        query?.whereKey("users", equalTo: self)
+        query?.findObjectsInBackgroundWithBlock { (objects,error) -> Void in
+            
+            if let objects = objects as? [Team] {
+                
+                Team.pinAllInBackground(objects)
+                
+                self.teams = objects
+                
+            }
+            
+            _completion?(error: error)
+            
+        }
+        
+    }
+    
+    func getTeamsLocal(completion: NSCompletion?){
+        
+        let _completion = completion
+        
+        let query = Team.query()
+        query?.fromLocalDatastore()
         query?.whereKey("users", equalTo: self)
         query?.findObjectsInBackgroundWithBlock { (objects,error) -> Void in
             

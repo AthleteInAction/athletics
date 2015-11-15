@@ -19,7 +19,6 @@ class TeamsTable: UIViewController {
     var type: String?
     var delegate: TeamsTablePTC?
     var teams: [Team] = []
-    var shouldClose = false
 
     @IBOutlet weak var table: UITableView!
     
@@ -33,16 +32,22 @@ class TeamsTable: UIViewController {
         table.delegate = self
         table.dataSource = self
         
-        setData()
+        if let type = type {
+            
+            if type == "event_edit" {
+                
+                let cancel = UIBarButtonItem(barButtonSystemItem: UIBarButtonSystemItem.Cancel, target: self, action: Selector("cancelTPD"))
+                navigationItem.setLeftBarButtonItem(cancel, animated: true)
+                
+            }
+            
+        }
+        
+        setData(true)
         
     }
 
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        
-        
-        
-    }
+    func cancelTPD(){ dismissViewControllerAnimated(true, completion: nil) }
     
     func addTPD(sender: UIBarButtonItem){
         
@@ -54,9 +59,11 @@ class TeamsTable: UIViewController {
         
     }
     
-    func setData(){
+    func setData(local: Bool){
         
         let query = Team.query()
+        
+        if local { query?.fromLocalDatastore() }
         
         if let t = type {
             
@@ -84,6 +91,19 @@ class TeamsTable: UIViewController {
                 
                 query?.whereKey("title", notEqualTo: "All")
                 
+            case "event_edit":
+                
+                query?.whereKey("title", notEqualTo: "All")
+                if let user = User.currentUser() {
+                    
+                    if !user.admin {
+                        
+                        query?.whereKey("users", equalTo: User.currentUser()!)
+                        
+                    }
+                    
+                }
+                
             default:
                 
                 query?.whereKey("title", notEqualTo: "All")
@@ -94,21 +114,25 @@ class TeamsTable: UIViewController {
         
         query?.findObjectsInBackgroundWithBlock { (objects,error) -> Void in
             
-            if let error = error {
+            if let objects = objects {
                 
-                Alert.error(error)
-                
-            } else {
-                
-                if let objects = objects {
+                if local {
                     
-                    self.teams = objects as! [Team]
-                    self.teams.sortInPlace { $0.title < $1.title }
-                    self.table.reloadData()
+                    self.setData(false)
+                
+                } else {
+                    
+                    Team.pinAllInBackground(objects)
                     
                 }
                 
+                self.teams = objects as! [Team]
+                self.teams.sortInPlace { $0.title < $1.title }
+                self.table.reloadData()
+                
             }
+            
+            if let error = error { Alert.error(error) }
             
         }
         
@@ -169,9 +193,20 @@ extension TeamsTable: UITableViewDelegate,UITableViewDataSource {
         if let t = type {
             
             switch t {
+            case "event_edit":
+                
+                dismissViewControllerAnimated(true, completion: nil)
+                
             case "schedules":
                 
                 let vc = Schedule(nibName: "Schedule",bundle: nil)
+                vc.team = team
+                
+                navigationController?.pushViewController(vc, animated: true)
+                
+            case "rosters":
+                
+                let vc = Roster(nibName: "Roster",bundle: nil)
                 vc.team = team
                 
                 navigationController?.pushViewController(vc, animated: true)
